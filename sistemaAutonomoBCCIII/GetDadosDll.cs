@@ -39,20 +39,13 @@ namespace sistemaAutonomoBCCIII
 
         public void ListarMao()
         {
-            string resposta = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
-            resposta.Replace("\r", "");
-            string[] cartas = resposta.Split('\n');
-            if(cartas[0] != null)
-                this.containerInicial.lblCaveira.Text = cartas[0].Substring(2,1);
-            if (cartas[1] != null)
-                this.containerInicial.lblFaca.Text = cartas[1].Substring(2, 1);
-            if (cartas[2] != null)
-                this.containerInicial.lblGarrafa.Text = cartas[2].Substring(2, 1);
-            if (cartas[3] != null)
-                this.containerInicial.lblPistola.Text = cartas[3].Substring(2, 1);
-            if (cartas[4] != null)
-                this.containerInicial.lblChave.Text = cartas[4].Substring(1, 1);
-
+            string[] cartas = this.tratamentos.stringsForArray(Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador));
+            this.containerInicial.lblCaveira.Text = cartas[0].Substring(2,1);
+            this.containerInicial.lblFaca.Text = cartas[1].Substring(2, 1);
+            this.containerInicial.lblGarrafa.Text = cartas[2].Substring(2, 1);
+            this.containerInicial.lblPistola.Text = cartas[3].Substring(2, 1);
+            this.containerInicial.lblChave.Text = cartas[4].Substring(1, 1);
+     
         }
     }
 }

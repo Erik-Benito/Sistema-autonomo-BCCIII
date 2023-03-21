@@ -30,13 +30,13 @@
         {
             this.txtCartagena = new System.Windows.Forms.Label();
             this.listBoxPartidas = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.txtPirata = new System.Windows.Forms.TextBox();
+            this.txtSenhaPirata = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.splitterJogo = new System.Windows.Forms.Splitter();
             this.btnCriarPartida = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSenhaPartida = new System.Windows.Forms.TextBox();
@@ -44,11 +44,11 @@
             this.txtNomePartida = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblGarrafa = new System.Windows.Forms.Label();
+            this.lblCaveira = new System.Windows.Forms.Label();
+            this.lblChave = new System.Windows.Forms.Label();
+            this.lblPistola = new System.Windows.Forms.Label();
+            this.lblFaca = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +56,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBoxPlayers = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,31 +86,32 @@
             this.listBoxPartidas.Click += new System.EventHandler(this.listBoxPartidas_Click);
             this.listBoxPartidas.SelectedIndexChanged += new System.EventHandler(this.listBoxPartidas_SelectedIndexChanged);
             // 
-            // button1
+            // btnEntrar
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(202, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.btnEntrar.Location = new System.Drawing.Point(202, 191);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(194, 102);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // textBox1
+            // txtPirata
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 94);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 29);
-            this.textBox1.TabIndex = 3;
+            this.txtPirata.Location = new System.Drawing.Point(202, 94);
+            this.txtPirata.Multiline = true;
+            this.txtPirata.Name = "txtPirata";
+            this.txtPirata.Size = new System.Drawing.Size(194, 29);
+            this.txtPirata.TabIndex = 3;
             // 
-            // textBox2
+            // txtSenhaPirata
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 156);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 29);
-            this.textBox2.TabIndex = 4;
+            this.txtSenhaPirata.Location = new System.Drawing.Point(202, 156);
+            this.txtSenhaPirata.Multiline = true;
+            this.txtSenhaPirata.Name = "txtSenhaPirata";
+            this.txtSenhaPirata.Size = new System.Drawing.Size(194, 29);
+            this.txtSenhaPirata.TabIndex = 4;
             // 
             // label1
             // 
@@ -139,15 +143,15 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Senha :";
             // 
-            // splitter1
+            // splitterJogo
             // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(589, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(570, 515);
-            this.splitter1.TabIndex = 8;
-            this.splitter1.TabStop = false;
+            this.splitterJogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitterJogo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.splitterJogo.Location = new System.Drawing.Point(589, 0);
+            this.splitterJogo.Name = "splitterJogo";
+            this.splitterJogo.Size = new System.Drawing.Size(570, 515);
+            this.splitterJogo.TabIndex = 8;
+            this.splitterJogo.TabStop = false;
             // 
             // btnCriarPartida
             // 
@@ -200,7 +204,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(112, 309);
+            this.label6.Location = new System.Drawing.Point(21, 316);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 39);
             this.label6.TabIndex = 14;
@@ -217,60 +221,60 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Suas cartas";
             // 
-            // label8
+            // lblGarrafa
             // 
-            this.label8.AutoEllipsis = true;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(689, 382);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(5);
-            this.label8.Size = new System.Drawing.Size(23, 23);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "8";
+            this.lblGarrafa.AutoEllipsis = true;
+            this.lblGarrafa.AutoSize = true;
+            this.lblGarrafa.Location = new System.Drawing.Point(689, 382);
+            this.lblGarrafa.Name = "lblGarrafa";
+            this.lblGarrafa.Padding = new System.Windows.Forms.Padding(5);
+            this.lblGarrafa.Size = new System.Drawing.Size(23, 23);
+            this.lblGarrafa.TabIndex = 21;
+            this.lblGarrafa.Text = "0";
             // 
-            // label9
+            // lblCaveira
             // 
-            this.label9.AutoEllipsis = true;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(766, 382);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(5);
-            this.label9.Size = new System.Drawing.Size(23, 23);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "8";
+            this.lblCaveira.AutoEllipsis = true;
+            this.lblCaveira.AutoSize = true;
+            this.lblCaveira.Location = new System.Drawing.Point(766, 382);
+            this.lblCaveira.Name = "lblCaveira";
+            this.lblCaveira.Padding = new System.Windows.Forms.Padding(5);
+            this.lblCaveira.Size = new System.Drawing.Size(23, 23);
+            this.lblCaveira.TabIndex = 22;
+            this.lblCaveira.Text = "0";
             // 
-            // label10
+            // lblChave
             // 
-            this.label10.AutoEllipsis = true;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(844, 382);
-            this.label10.Name = "label10";
-            this.label10.Padding = new System.Windows.Forms.Padding(5);
-            this.label10.Size = new System.Drawing.Size(23, 23);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "8";
+            this.lblChave.AutoEllipsis = true;
+            this.lblChave.AutoSize = true;
+            this.lblChave.Location = new System.Drawing.Point(844, 382);
+            this.lblChave.Name = "lblChave";
+            this.lblChave.Padding = new System.Windows.Forms.Padding(5);
+            this.lblChave.Size = new System.Drawing.Size(23, 23);
+            this.lblChave.TabIndex = 23;
+            this.lblChave.Text = "0";
             // 
-            // label11
+            // lblPistola
             // 
-            this.label11.AutoEllipsis = true;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(922, 382);
-            this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(5);
-            this.label11.Size = new System.Drawing.Size(23, 23);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "8";
+            this.lblPistola.AutoEllipsis = true;
+            this.lblPistola.AutoSize = true;
+            this.lblPistola.Location = new System.Drawing.Point(922, 382);
+            this.lblPistola.Name = "lblPistola";
+            this.lblPistola.Padding = new System.Windows.Forms.Padding(5);
+            this.lblPistola.Size = new System.Drawing.Size(23, 23);
+            this.lblPistola.TabIndex = 24;
+            this.lblPistola.Text = "0";
             // 
-            // label12
+            // lblFaca
             // 
-            this.label12.AutoEllipsis = true;
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1002, 382);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(5);
-            this.label12.Size = new System.Drawing.Size(23, 23);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "8";
+            this.lblFaca.AutoEllipsis = true;
+            this.lblFaca.AutoSize = true;
+            this.lblFaca.Location = new System.Drawing.Point(1002, 382);
+            this.lblFaca.Name = "lblFaca";
+            this.lblFaca.Padding = new System.Windows.Forms.Padding(5);
+            this.lblFaca.Size = new System.Drawing.Size(23, 23);
+            this.lblFaca.TabIndex = 25;
+            this.lblFaca.Text = "0";
             // 
             // pictureBox5
             // 
@@ -340,18 +344,53 @@
             this.label13.TabIndex = 27;
             this.label13.Text = "Piratas Online :";
             // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.lblSenha.Location = new System.Drawing.Point(281, 67);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(0, 24);
+            this.lblSenha.TabIndex = 28;
+            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.btnIniciar.Location = new System.Drawing.Point(415, 364);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(143, 112);
+            this.btnIniciar.TabIndex = 29;
+            this.btnIniciar.Text = "Inciar";
+            this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(411, 331);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(125, 24);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Iniciar partida :";
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.listBoxPlayers);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblFaca);
+            this.Controls.Add(this.lblPistola);
+            this.Controls.Add(this.lblChave);
+            this.Controls.Add(this.lblCaveira);
+            this.Controls.Add(this.lblGarrafa);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -364,13 +403,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSenhaPartida);
             this.Controls.Add(this.btnCriarPartida);
-            this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.splitterJogo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtSenhaPirata);
+            this.Controls.Add(this.txtPirata);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.listBoxPartidas);
             this.Controls.Add(this.txtCartagena);
             this.Name = "ContainerInicial";
@@ -389,13 +428,13 @@
         #endregion
 
         private System.Windows.Forms.Label txtCartagena;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.TextBox txtPirata;
+        private System.Windows.Forms.TextBox txtSenhaPirata;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Splitter splitterJogo;
         private System.Windows.Forms.Button btnCriarPartida;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSenhaPartida;
@@ -408,14 +447,17 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         public System.Windows.Forms.ListBox listBoxPartidas;
         public System.Windows.Forms.ListBox listBoxPlayers;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Label lblGarrafa;
+        public System.Windows.Forms.Label lblCaveira;
+        public System.Windows.Forms.Label lblChave;
+        public System.Windows.Forms.Label lblPistola;
+        public System.Windows.Forms.Label lblFaca;
     }
 }
 

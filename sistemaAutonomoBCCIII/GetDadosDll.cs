@@ -1,8 +1,5 @@
 ﻿using CartagenaServer;
 using System;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Windows.Forms;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -10,6 +7,15 @@ namespace sistemaAutonomoBCCIII
     {
         public Tratamentos tratamentos;
         public ContainerInicial containerInicial;
+
+        private int qtdCartas(string cartas, string cartaProcurada)
+        {
+            int posicaoCarta = cartas.IndexOf(cartaProcurada);
+
+            if (posicaoCarta == -1) return 0;
+
+            return Convert.ToInt32(cartas.Substring(posicaoCarta + 2, 1));
+        }
 
         public GetDadosDll(ContainerInicial containerInicial)
         {
@@ -19,11 +25,13 @@ namespace sistemaAutonomoBCCIII
 
         public void ListarPartidas()
         {
+            this.containerInicial.listBoxPartidas.Items.Clear();
+
             string resposta = Jogo.ListarPartidas("T");
             string[] partidas = this.tratamentos.stringsForArray(resposta);
 
             foreach (string partida in partidas)
-                 this.containerInicial.listBoxPartidas.Items.Add(partida);
+                this.containerInicial.listBoxPartidas.Items.Add(partida);
         }
 
         public void ListarPlayers()
@@ -39,13 +47,16 @@ namespace sistemaAutonomoBCCIII
 
         public void ListarMao()
         {
-            string[] cartas = this.tratamentos.stringsForArray(Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador));
-            this.containerInicial.lblCaveira.Text = cartas[0].Substring(2,1);
-            this.containerInicial.lblFaca.Text = cartas[1].Substring(2, 1);
-            this.containerInicial.lblGarrafa.Text = cartas[2].Substring(2, 1);
-            this.containerInicial.lblPistola.Text = cartas[3].Substring(2, 1);
-            this.containerInicial.lblChave.Text = cartas[4].Substring(1, 1);
-     
+            string cartas = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
+
+            if (this.tratamentos.ehErro(cartas))
+                return;
+
+            this.containerInicial.lblCaveira.Text = this.qtdCartas(cartas, "E").ToString();
+            this.containerInicial.lblFaca.Text = this.qtdCartas(cartas, "F").ToString();
+            this.containerInicial.lblGarrafa.Text = this.qtdCartas(cartas, "G").ToString();
+            this.containerInicial.lblPistola.Text = this.qtdCartas(cartas, "P").ToString();
+            this.containerInicial.lblChave.Text = this.qtdCartas(cartas, "T").ToString();
         }
     }
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using CartagenaServer;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CartagenaServer;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -15,6 +9,7 @@ namespace sistemaAutonomoBCCIII
     {
 
         public GetDadosDll getDadosDll;
+        public Tratamentos tratamentos;
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
@@ -23,27 +18,21 @@ namespace sistemaAutonomoBCCIII
         {
             InitializeComponent();
             this.getDadosDll = new GetDadosDll(this);
+            this.tratamentos = new Tratamentos();
         }
 
         private void ContainerInicial_Load(object sender, EventArgs e)
         {
             this.getDadosDll.ListarPartidas();
-            
+            this.getDadosDll.ListarMao();
         }
 
-
-
-        private void listBoxPartidas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void listBoxPartidas_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void listBoxPartidas_Click(object sender, EventArgs e)
         {
-            this.idPartida = Convert.ToInt32(this.listBoxPartidas.Items[this.listBoxPartidas.SelectedIndex].ToString().Substring(0, 2));
+            this.idPartida = this.tratamentos.getIdString(this.listBoxPartidas.Items[this.listBoxPartidas.SelectedIndex].ToString());
             this.getDadosDll.ListarPlayers();
-
-
         }
 
         private void btnCriarPartida_Click(object sender, EventArgs e)
@@ -65,7 +54,8 @@ namespace sistemaAutonomoBCCIII
 
             this.idPartida = Convert.ToInt32(Jogo.CriarPartida(nome, senha));
 
-            MessageBox.Show(@"Partida Criada com sucesso ${this.idPartida}");
+            this.getDadosDll.ListarPartidas();
+            MessageBox.Show($"Partida Criada com sucesso {this.idPartida}");
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -78,31 +68,36 @@ namespace sistemaAutonomoBCCIII
                 MessageBox.Show("Deve ser preenchido com um nome valido de pirata!");
                 return;
             }
-            
+
             if (String.IsNullOrEmpty(senha))
             {
                 MessageBox.Show("Deve ser preenchido com uma senha valido a senha!");
                 return;
             }
 
-            string[] resposta = Jogo.EntrarPartida(this.idPartida, nome, senha).Split(',');
+            string resposta = Jogo.EntrarPartida(this.idPartida, nome, senha);
+            
+            if (this.tratamentos.ehErro(resposta))
+                return;
 
-            this.idJogador = Convert.ToInt32(resposta[0]);
-            this.lblSenha.Text = "Senha:" + resposta[1];
-            this.senhaJogador = resposta[1];
-            this.splitterJogo.BackColor = resposta[2] == "Vermelho" ? Color.Red: Color.Green;
+            string[] dados = resposta.Split(',');
+            this.idJogador = Convert.ToInt32(dados[0]);
+            this.lblSenha.Text = "Senha:" + dados[1];
+            this.senhaJogador = dados[1];
+            this.splitterJogo.BackColor = dados[2] == "vermelho" ? Color.Red : Color.Green;
 
-            MessageBox.Show(@"Entrou com sucesso ${this.idPartida}");
+            MessageBox.Show($"Entrou com sucesso {this.idPartida}");
         }
 
-        private void lblSenha_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblSenha_Click(object sender, EventArgs e) { }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            Jogo.IniciarPartida(this.idJogador, this.senhaJogador);
+            string resposta = Jogo.IniciarPartida(this.idJogador, this.senhaJogador);
+
+            if (this.tratamentos.ehErro(resposta))
+                return;
+
             this.getDadosDll.ListarMao();
         }
     }

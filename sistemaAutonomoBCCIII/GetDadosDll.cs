@@ -48,5 +48,20 @@ namespace sistemaAutonomoBCCIII
 
             this.controleCarta.setCartas(cartas);
         }
+
+        public void ListarPosicao()
+        {
+            string resposta = Jogo.ExibirTabuleiro(this.containerInicial.idPartida);
+
+            if (this.tratamentos.ehErro(resposta))
+                return;
+
+            string[] posicoes = this.tratamentos.stringsForArray(resposta);
+
+            foreach (string posicao in posicoes)
+                this.containerInicial.listBoxPosicoes.Items.Add(posicao);
+
+            this.containerInicial.posicicoes = posicoes;
+        }
     }
 }

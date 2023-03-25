@@ -15,6 +15,9 @@ namespace sistemaAutonomoBCCIII
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
+        public string[] posicicoes;
+        public int[] piratas = { 0, 0, 0, 0, 0, 0, 0 };
+        public int pirataEscolhido;
 
         public ContainerInicial()
         {
@@ -100,9 +103,9 @@ namespace sistemaAutonomoBCCIII
             if (this.tratamentos.ehErro(resposta))
                 return;
 
-
             this.getDadosDll.ListarPartidas();
             this.getDadosDll.ListarMao();
+            this.getDadosDll.ListarPosicao();
         }
 
         private void cartaTricornio_Click(object sender, EventArgs e)
@@ -137,6 +140,16 @@ namespace sistemaAutonomoBCCIII
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
+            Jogo.Jogar(this.idJogador, this.senhaJogador, this.piratas[this.pirataEscolhido], this.controleCarta.cartaSelecionada);
+            Console.WriteLine(Jogo.ExibirHistorico(this.idPartida));
+            this.getDadosDll.ListarPosicao();
+        }
+
+        private void listBoxPosicoes_SelectedIndexChanged(object sender, EventArgs e){}
+
+        private void txtPirataEscolhido_TextChanged(object sender, EventArgs e)
+        {
+            this.pirataEscolhido = Convert.ToInt32(this.txtPirataEscolhido.Text);
         }
     }
 }

@@ -62,6 +62,9 @@
             this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
             this.cartaGarrafa = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.listBoxPosicoes = new System.Windows.Forms.ListBox();
+            this.txtPirataEscolhido = new System.Windows.Forms.TextBox();
+            this.listBoxPiratas1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
@@ -419,11 +422,40 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Suas cartas :";
             // 
+            // listBoxPosicoes
+            // 
+            this.listBoxPosicoes.FormattingEnabled = true;
+            this.listBoxPosicoes.Location = new System.Drawing.Point(614, 23);
+            this.listBoxPosicoes.Name = "listBoxPosicoes";
+            this.listBoxPosicoes.Size = new System.Drawing.Size(172, 290);
+            this.listBoxPosicoes.TabIndex = 35;
+            this.listBoxPosicoes.SelectedIndexChanged += new System.EventHandler(this.listBoxPosicoes_SelectedIndexChanged);
+            // 
+            // txtPirataEscolhido
+            // 
+            this.txtPirataEscolhido.Location = new System.Drawing.Point(797, 23);
+            this.txtPirataEscolhido.Multiline = true;
+            this.txtPirataEscolhido.Name = "txtPirataEscolhido";
+            this.txtPirataEscolhido.Size = new System.Drawing.Size(152, 31);
+            this.txtPirataEscolhido.TabIndex = 36;
+            this.txtPirataEscolhido.TextChanged += new System.EventHandler(this.txtPirataEscolhido_TextChanged);
+            // 
+            // listBoxPiratas1
+            // 
+            this.listBoxPiratas1.FormattingEnabled = true;
+            this.listBoxPiratas1.Location = new System.Drawing.Point(955, 23);
+            this.listBoxPiratas1.Name = "listBoxPiratas1";
+            this.listBoxPiratas1.Size = new System.Drawing.Size(172, 290);
+            this.listBoxPiratas1.TabIndex = 37;
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.listBoxPiratas1);
+            this.Controls.Add(this.txtPirataEscolhido);
+            this.Controls.Add(this.listBoxPosicoes);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblFaca);
             this.Controls.Add(this.lblTricornio);
@@ -508,6 +540,9 @@
         public System.Windows.Forms.Label lblTricornio;
         private System.Windows.Forms.PictureBox cartaTricornio;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ListBox listBoxPosicoes;
+        private System.Windows.Forms.TextBox txtPirataEscolhido;
+        public System.Windows.Forms.ListBox listBoxPiratas1;
     }
 }
 

@@ -43,27 +43,31 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtNomePartida = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lblGarrafa = new System.Windows.Forms.Label();
             this.lblCaveira = new System.Windows.Forms.Label();
             this.lblChave = new System.Windows.Forms.Label();
             this.lblPistola = new System.Windows.Forms.Label();
             this.lblFaca = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBoxPlayers = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnJogar = new System.Windows.Forms.Button();
+            this.lblTricornio = new System.Windows.Forms.Label();
+            this.cartaTricornio = new System.Windows.Forms.PictureBox();
+            this.cartaFaca = new System.Windows.Forms.PictureBox();
+            this.cartaPistola = new System.Windows.Forms.PictureBox();
+            this.cartaChave = new System.Windows.Forms.PictureBox();
+            this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
+            this.cartaGarrafa = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaChave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaEsqueleto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaGarrafa)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCartagena
@@ -210,22 +214,11 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Novo jogo :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkGray;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(624, 331);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 39);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Suas cartas";
-            // 
             // lblGarrafa
             // 
             this.lblGarrafa.AutoEllipsis = true;
             this.lblGarrafa.AutoSize = true;
-            this.lblGarrafa.Location = new System.Drawing.Point(689, 382);
+            this.lblGarrafa.Location = new System.Drawing.Point(673, 382);
             this.lblGarrafa.Name = "lblGarrafa";
             this.lblGarrafa.Padding = new System.Windows.Forms.Padding(5);
             this.lblGarrafa.Size = new System.Drawing.Size(23, 23);
@@ -236,7 +229,7 @@
             // 
             this.lblCaveira.AutoEllipsis = true;
             this.lblCaveira.AutoSize = true;
-            this.lblCaveira.Location = new System.Drawing.Point(766, 382);
+            this.lblCaveira.Location = new System.Drawing.Point(760, 382);
             this.lblCaveira.Name = "lblCaveira";
             this.lblCaveira.Padding = new System.Windows.Forms.Padding(5);
             this.lblCaveira.Size = new System.Drawing.Size(23, 23);
@@ -247,7 +240,7 @@
             // 
             this.lblChave.AutoEllipsis = true;
             this.lblChave.AutoSize = true;
-            this.lblChave.Location = new System.Drawing.Point(844, 382);
+            this.lblChave.Location = new System.Drawing.Point(850, 382);
             this.lblChave.Name = "lblChave";
             this.lblChave.Padding = new System.Windows.Forms.Padding(5);
             this.lblChave.Size = new System.Drawing.Size(23, 23);
@@ -258,7 +251,7 @@
             // 
             this.lblPistola.AutoEllipsis = true;
             this.lblPistola.AutoSize = true;
-            this.lblPistola.Location = new System.Drawing.Point(922, 382);
+            this.lblPistola.Location = new System.Drawing.Point(940, 382);
             this.lblPistola.Name = "lblPistola";
             this.lblPistola.Padding = new System.Windows.Forms.Padding(5);
             this.lblPistola.Size = new System.Drawing.Size(23, 23);
@@ -269,62 +262,12 @@
             // 
             this.lblFaca.AutoEllipsis = true;
             this.lblFaca.AutoSize = true;
-            this.lblFaca.Location = new System.Drawing.Point(1002, 382);
+            this.lblFaca.Location = new System.Drawing.Point(1029, 382);
             this.lblFaca.Name = "lblFaca";
             this.lblFaca.Padding = new System.Windows.Forms.Padding(5);
             this.lblFaca.Size = new System.Drawing.Size(23, 23);
             this.lblFaca.TabIndex = 25;
             this.lblFaca.Text = "0";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::sistemaAutonomoBCCIII.Properties.Resources.faca;
-            this.pictureBox5.Location = new System.Drawing.Point(942, 388);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 112);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::sistemaAutonomoBCCIII.Properties.Resources.pistola;
-            this.pictureBox4.Location = new System.Drawing.Point(864, 388);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 112);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::sistemaAutonomoBCCIII.Properties.Resources.chave;
-            this.pictureBox3.Location = new System.Drawing.Point(786, 388);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 112);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::sistemaAutonomoBCCIII.Properties.Resources.caverira;
-            this.pictureBox2.Location = new System.Drawing.Point(708, 388);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 112);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sistemaAutonomoBCCIII.Properties.Resources.garrafa;
-            this.pictureBox1.Location = new System.Drawing.Point(630, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // listBoxPlayers
             // 
@@ -376,27 +319,130 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Iniciar partida :";
             // 
+            // btnJogar
+            // 
+            this.btnJogar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.btnJogar.Location = new System.Drawing.Point(797, 331);
+            this.btnJogar.Name = "btnJogar";
+            this.btnJogar.Size = new System.Drawing.Size(330, 39);
+            this.btnJogar.TabIndex = 31;
+            this.btnJogar.Text = "Jogar";
+            this.btnJogar.UseVisualStyleBackColor = true;
+            this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
+            // 
+            // lblTricornio
+            // 
+            this.lblTricornio.AutoEllipsis = true;
+            this.lblTricornio.AutoSize = true;
+            this.lblTricornio.Location = new System.Drawing.Point(1118, 382);
+            this.lblTricornio.Name = "lblTricornio";
+            this.lblTricornio.Padding = new System.Windows.Forms.Padding(5);
+            this.lblTricornio.Size = new System.Drawing.Size(23, 23);
+            this.lblTricornio.TabIndex = 33;
+            this.lblTricornio.Text = "0";
+            // 
+            // cartaTricornio
+            // 
+            this.cartaTricornio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cartaTricornio.ErrorImage = global::sistemaAutonomoBCCIII.Properties.Resources.cg_cardl__1_;
+            this.cartaTricornio.Image = global::sistemaAutonomoBCCIII.Properties.Resources.cg_cardl__1_;
+            this.cartaTricornio.Location = new System.Drawing.Point(1055, 388);
+            this.cartaTricornio.Name = "cartaTricornio";
+            this.cartaTricornio.Size = new System.Drawing.Size(72, 112);
+            this.cartaTricornio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cartaTricornio.TabIndex = 32;
+            this.cartaTricornio.TabStop = false;
+            this.cartaTricornio.Click += new System.EventHandler(this.cartaTricornio_Click);
+            // 
+            // cartaFaca
+            // 
+            this.cartaFaca.Image = global::sistemaAutonomoBCCIII.Properties.Resources.faca;
+            this.cartaFaca.Location = new System.Drawing.Point(969, 388);
+            this.cartaFaca.Name = "cartaFaca";
+            this.cartaFaca.Size = new System.Drawing.Size(72, 112);
+            this.cartaFaca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cartaFaca.TabIndex = 20;
+            this.cartaFaca.TabStop = false;
+            this.cartaFaca.Click += new System.EventHandler(this.cartaFaca_Click);
+            // 
+            // cartaPistola
+            // 
+            this.cartaPistola.Image = global::sistemaAutonomoBCCIII.Properties.Resources.pistola;
+            this.cartaPistola.Location = new System.Drawing.Point(882, 388);
+            this.cartaPistola.Name = "cartaPistola";
+            this.cartaPistola.Size = new System.Drawing.Size(72, 112);
+            this.cartaPistola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cartaPistola.TabIndex = 19;
+            this.cartaPistola.TabStop = false;
+            this.cartaPistola.Click += new System.EventHandler(this.cartaPistola_Click);
+            // 
+            // cartaChave
+            // 
+            this.cartaChave.Image = global::sistemaAutonomoBCCIII.Properties.Resources.chave;
+            this.cartaChave.Location = new System.Drawing.Point(792, 388);
+            this.cartaChave.Name = "cartaChave";
+            this.cartaChave.Size = new System.Drawing.Size(72, 112);
+            this.cartaChave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cartaChave.TabIndex = 18;
+            this.cartaChave.TabStop = false;
+            this.cartaChave.Click += new System.EventHandler(this.cartaChave_Click);
+            // 
+            // cartaEsqueleto
+            // 
+            this.cartaEsqueleto.Image = global::sistemaAutonomoBCCIII.Properties.Resources.caverira;
+            this.cartaEsqueleto.Location = new System.Drawing.Point(702, 388);
+            this.cartaEsqueleto.Name = "cartaEsqueleto";
+            this.cartaEsqueleto.Size = new System.Drawing.Size(72, 112);
+            this.cartaEsqueleto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cartaEsqueleto.TabIndex = 17;
+            this.cartaEsqueleto.TabStop = false;
+            this.cartaEsqueleto.Click += new System.EventHandler(this.cartaEsqueleto_Click);
+            // 
+            // cartaGarrafa
+            // 
+            this.cartaGarrafa.Image = global::sistemaAutonomoBCCIII.Properties.Resources.garrafa;
+            this.cartaGarrafa.Location = new System.Drawing.Point(614, 388);
+            this.cartaGarrafa.Name = "cartaGarrafa";
+            this.cartaGarrafa.Size = new System.Drawing.Size(72, 112);
+            this.cartaGarrafa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cartaGarrafa.TabIndex = 16;
+            this.cartaGarrafa.TabStop = false;
+            this.cartaGarrafa.Click += new System.EventHandler(this.cartaGarrafa_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(607, 331);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 39);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Suas cartas :";
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblFaca);
+            this.Controls.Add(this.lblTricornio);
+            this.Controls.Add(this.cartaTricornio);
+            this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.listBoxPlayers);
-            this.Controls.Add(this.lblFaca);
             this.Controls.Add(this.lblPistola);
             this.Controls.Add(this.lblChave);
             this.Controls.Add(this.lblCaveira);
             this.Controls.Add(this.lblGarrafa);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cartaFaca);
+            this.Controls.Add(this.cartaPistola);
+            this.Controls.Add(this.cartaChave);
+            this.Controls.Add(this.cartaEsqueleto);
+            this.Controls.Add(this.cartaGarrafa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNomePartida);
@@ -415,11 +461,12 @@
             this.Name = "ContainerInicial";
             this.Text = "Test";
             this.Load += new System.EventHandler(this.ContainerInicial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaChave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaEsqueleto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartaGarrafa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,12 +488,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNomePartida;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox cartaGarrafa;
+        private System.Windows.Forms.PictureBox cartaEsqueleto;
+        private System.Windows.Forms.PictureBox cartaChave;
+        private System.Windows.Forms.PictureBox cartaPistola;
+        private System.Windows.Forms.PictureBox cartaFaca;
         public System.Windows.Forms.ListBox listBoxPartidas;
         public System.Windows.Forms.ListBox listBoxPlayers;
         private System.Windows.Forms.Label label13;
@@ -458,6 +504,10 @@
         public System.Windows.Forms.Label lblChave;
         public System.Windows.Forms.Label lblPistola;
         public System.Windows.Forms.Label lblFaca;
+        private System.Windows.Forms.Button btnJogar;
+        public System.Windows.Forms.Label lblTricornio;
+        private System.Windows.Forms.PictureBox cartaTricornio;
+        private System.Windows.Forms.Label label7;
     }
 }
 

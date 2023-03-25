@@ -60,6 +60,7 @@
     <Compile Include="GetDadosDll.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\cartaSelecionada.cs" />
     <Compile Include="TratamentoDados.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -90,6 +91,7 @@
   <ItemGroup>
     <Content Include="dll\CartagenaServer.dll" />
     <Content Include="dll\CartagenaServer.xml" />
+    <None Include="Resources\cg_cardl %281%29.jpg" />
     <None Include="Resources\image 3barco.png" />
     <None Include="Resources\pirata.png" />
     <None Include="Resources\faca.jpg" />

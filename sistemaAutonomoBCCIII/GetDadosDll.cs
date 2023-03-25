@@ -1,4 +1,5 @@
 ﻿using CartagenaServer;
+using sistemaAutonomoBCCIII.Properties;
 using System;
 
 namespace sistemaAutonomoBCCIII
@@ -7,20 +8,13 @@ namespace sistemaAutonomoBCCIII
     {
         public Tratamentos tratamentos;
         public ContainerInicial containerInicial;
-
-        private int qtdCartas(string cartas, string cartaProcurada)
-        {
-            int posicaoCarta = cartas.IndexOf(cartaProcurada);
-
-            if (posicaoCarta == -1) return 0;
-
-            return Convert.ToInt32(cartas.Substring(posicaoCarta + 2, 1));
-        }
+        public ControleCarta controleCarta;
 
         public GetDadosDll(ContainerInicial containerInicial)
         {
             this.containerInicial = containerInicial;
             this.tratamentos = new Tratamentos();
+            this.controleCarta = new ControleCarta(containerInicial);
         }
 
         public void ListarPartidas()
@@ -52,11 +46,7 @@ namespace sistemaAutonomoBCCIII
             if (this.tratamentos.ehErro(cartas))
                 return;
 
-            this.containerInicial.lblCaveira.Text = this.qtdCartas(cartas, "E").ToString();
-            this.containerInicial.lblFaca.Text = this.qtdCartas(cartas, "F").ToString();
-            this.containerInicial.lblGarrafa.Text = this.qtdCartas(cartas, "G").ToString();
-            this.containerInicial.lblPistola.Text = this.qtdCartas(cartas, "P").ToString();
-            this.containerInicial.lblChave.Text = this.qtdCartas(cartas, "T").ToString();
+            this.controleCarta.setCartas(cartas);
         }
     }
 }

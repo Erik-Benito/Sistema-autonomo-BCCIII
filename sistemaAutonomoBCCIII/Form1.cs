@@ -1,4 +1,5 @@
 ﻿using CartagenaServer;
+using sistemaAutonomoBCCIII.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace sistemaAutonomoBCCIII
 
         public GetDadosDll getDadosDll;
         public Tratamentos tratamentos;
+        public ControleCarta controleCarta;
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
@@ -18,13 +20,13 @@ namespace sistemaAutonomoBCCIII
         {
             InitializeComponent();
             this.getDadosDll = new GetDadosDll(this);
+            this.controleCarta = new ControleCarta(this);
             this.tratamentos = new Tratamentos();
         }
 
         private void ContainerInicial_Load(object sender, EventArgs e)
         {
             this.getDadosDll.ListarPartidas();
-            this.getDadosDll.ListarMao();
         }
 
         private void listBoxPartidas_SelectedIndexChanged(object sender, EventArgs e) { }
@@ -84,7 +86,7 @@ namespace sistemaAutonomoBCCIII
             this.idJogador = Convert.ToInt32(dados[0]);
             this.lblSenha.Text = "Senha:" + dados[1];
             this.senhaJogador = dados[1];
-            this.splitterJogo.BackColor = dados[2] == "vermelho" ? Color.Red : Color.Green;
+            this.splitterJogo.BackColor = dados[2] == "vermelho" ? Color.Red : Color.Red;
 
             MessageBox.Show($"Entrou com sucesso {this.idPartida}");
         }
@@ -98,7 +100,43 @@ namespace sistemaAutonomoBCCIII
             if (this.tratamentos.ehErro(resposta))
                 return;
 
+
+            this.getDadosDll.ListarPartidas();
             this.getDadosDll.ListarMao();
+        }
+
+        private void cartaTricornio_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("T");
+        }
+
+        private void cartaFaca_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("F");
+        }
+
+        private void cartaPistola_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("P");
+        }
+
+        private void cartaChave_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("C");
+        }
+
+        private void cartaEsqueleto_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("E");
+        }
+
+        private void cartaGarrafa_Click(object sender, EventArgs e)
+        {
+            this.controleCarta.selecionarCarta("G");
+        }
+
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
         }
     }
 }

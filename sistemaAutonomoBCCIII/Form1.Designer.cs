@@ -425,25 +425,25 @@
             // listBoxPosicoes
             // 
             this.listBoxPosicoes.FormattingEnabled = true;
-            this.listBoxPosicoes.Location = new System.Drawing.Point(614, 23);
+            this.listBoxPosicoes.Location = new System.Drawing.Point(792, 27);
             this.listBoxPosicoes.Name = "listBoxPosicoes";
-            this.listBoxPosicoes.Size = new System.Drawing.Size(172, 290);
+            this.listBoxPosicoes.Size = new System.Drawing.Size(335, 186);
             this.listBoxPosicoes.TabIndex = 35;
             this.listBoxPosicoes.SelectedIndexChanged += new System.EventHandler(this.listBoxPosicoes_SelectedIndexChanged);
             // 
             // txtPirataEscolhido
             // 
-            this.txtPirataEscolhido.Location = new System.Drawing.Point(797, 23);
+            this.txtPirataEscolhido.Location = new System.Drawing.Point(792, 236);
             this.txtPirataEscolhido.Multiline = true;
             this.txtPirataEscolhido.Name = "txtPirataEscolhido";
-            this.txtPirataEscolhido.Size = new System.Drawing.Size(152, 31);
+            this.txtPirataEscolhido.Size = new System.Drawing.Size(152, 82);
             this.txtPirataEscolhido.TabIndex = 36;
             this.txtPirataEscolhido.TextChanged += new System.EventHandler(this.txtPirataEscolhido_TextChanged);
             // 
             // listBoxPiratas1
             // 
             this.listBoxPiratas1.FormattingEnabled = true;
-            this.listBoxPiratas1.Location = new System.Drawing.Point(955, 23);
+            this.listBoxPiratas1.Location = new System.Drawing.Point(614, 23);
             this.listBoxPiratas1.Name = "listBoxPiratas1";
             this.listBoxPiratas1.Size = new System.Drawing.Size(172, 290);
             this.listBoxPiratas1.TabIndex = 37;

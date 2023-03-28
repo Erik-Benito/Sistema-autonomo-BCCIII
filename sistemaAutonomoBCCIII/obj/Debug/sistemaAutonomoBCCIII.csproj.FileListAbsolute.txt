@@ -12,3 +12,17 @@ C:\Users\erikb\source\repos\sistemaAutonomoBCCIII\sistemaAutonomoBCCIII\obj\Debu
 C:\Users\erikb\source\repos\sistemaAutonomoBCCIII\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.dll
 C:\Users\erikb\source\repos\sistemaAutonomoBCCIII\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.xml
 C:\Users\erikb\source\repos\sistemaAutonomoBCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.AssemblyReference.cache
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.SuggestedBindingRedirects.cache
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.ContainerInicial.resources
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.Properties.Resources.resources
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.GenerateResource.cache
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CoreCompileInputs.cache
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.exe
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.pdb
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe.config
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.pdb
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.dll
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.xml
+D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete

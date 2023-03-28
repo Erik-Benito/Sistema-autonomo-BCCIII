@@ -12,12 +12,12 @@ namespace sistemaAutonomoBCCIII
         public GetDadosDll getDadosDll;
         public Tratamentos tratamentos;
         public ControleCarta controleCarta;
+        public ControlePirata controlePirata;
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
         public string[] posicicoes;
-        public int[] piratas = { 0, 0, 0, 0, 0, 0, 0 };
-        public int pirataEscolhido;
+        public string pirataEscolhido;
 
         public ContainerInicial()
         {
@@ -25,6 +25,7 @@ namespace sistemaAutonomoBCCIII
             this.getDadosDll = new GetDadosDll(this);
             this.controleCarta = new ControleCarta(this);
             this.tratamentos = new Tratamentos();
+            this.controlePirata = new ControlePirata(this);
         }
 
         private void ContainerInicial_Load(object sender, EventArgs e)
@@ -140,7 +141,9 @@ namespace sistemaAutonomoBCCIII
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            Jogo.Jogar(this.idJogador, this.senhaJogador, this.piratas[this.pirataEscolhido], this.controleCarta.cartaSelecionada);
+            Console.WriteLine( this.controlePirata.SelecionarPirata(this.controlePirata.pirataSelecionado));
+            Jogo.Jogar(this.idJogador, this.senhaJogador, this.controlePirata.SelecionarPirata(this.controlePirata.pirataSelecionado), this.controleCarta.cartaSelecionada);
+            this.controlePirata.SetPosicao(this.controlePirata.pirataSelecionado, this.getDadosDll.PosicaoPirata());
             Console.WriteLine(Jogo.ExibirHistorico(this.idPartida));
             this.getDadosDll.ListarPosicao();
         }
@@ -149,7 +152,23 @@ namespace sistemaAutonomoBCCIII
 
         private void txtPirataEscolhido_TextChanged(object sender, EventArgs e)
         {
-            this.pirataEscolhido = Convert.ToInt32(this.txtPirataEscolhido.Text);
+            this.pirataEscolhido = this.txtPirataEscolhido.Text;
+        }
+
+        private void listBoxPiratas1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.controlePirata.pirataSelecionado = this.listBoxPiratas1.SelectedIndex;
+            Console.WriteLine(this.controlePirata.pirataSelecionado);
+        }
+
+        private void lblCaveira_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGarrafa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -227,6 +227,7 @@
             this.lblGarrafa.Size = new System.Drawing.Size(23, 23);
             this.lblGarrafa.TabIndex = 21;
             this.lblGarrafa.Text = "0";
+            this.lblGarrafa.Click += new System.EventHandler(this.lblGarrafa_Click);
             // 
             // lblCaveira
             // 
@@ -238,6 +239,7 @@
             this.lblCaveira.Size = new System.Drawing.Size(23, 23);
             this.lblCaveira.TabIndex = 22;
             this.lblCaveira.Text = "0";
+            this.lblCaveira.Click += new System.EventHandler(this.lblCaveira_Click);
             // 
             // lblChave
             // 
@@ -443,10 +445,18 @@
             // listBoxPiratas1
             // 
             this.listBoxPiratas1.FormattingEnabled = true;
+            this.listBoxPiratas1.Items.AddRange(new object[] {
+            "Pirata1",
+            "Pirata2",
+            "Pirata3",
+            "Pirata4",
+            "Pirata5",
+            "Pirata6"});
             this.listBoxPiratas1.Location = new System.Drawing.Point(614, 23);
             this.listBoxPiratas1.Name = "listBoxPiratas1";
             this.listBoxPiratas1.Size = new System.Drawing.Size(172, 290);
             this.listBoxPiratas1.TabIndex = 37;
+            this.listBoxPiratas1.SelectedIndexChanged += new System.EventHandler(this.listBoxPiratas1_SelectedIndexChanged);
             // 
             // ContainerInicial
             // 

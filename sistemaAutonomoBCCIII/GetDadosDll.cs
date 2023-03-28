@@ -63,5 +63,13 @@ namespace sistemaAutonomoBCCIII
 
             this.containerInicial.posicicoes = posicoes;
         }
+
+        public int PosicaoPirata()
+        {
+            string posicao = Jogo.ExibirHistorico(this.containerInicial.idPartida);
+            int indiceVirgula = posicao.LastIndexOf(",");
+            string resultado = posicao.Substring(indiceVirgula + 1);
+            return Convert.ToInt32(resultado);
+        }
     }
 }

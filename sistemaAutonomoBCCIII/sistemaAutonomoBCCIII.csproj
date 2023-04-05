@@ -92,6 +92,13 @@
   <ItemGroup>
     <Content Include="dll\CartagenaServer.dll" />
     <Content Include="dll\CartagenaServer.xml" />
+    <Content Include="Resources\imgCaveira.jpg" />
+    <Content Include="Resources\imgChapeu.png" />
+    <Content Include="Resources\imgChave.png" />
+    <Content Include="Resources\imgFaca.png" />
+    <Content Include="Resources\imgGarrafa.png" />
+    <None Include="Resources\imgPistola.png" />
+    <None Include="Resources\Tabuleiro1.png" />
     <None Include="Resources\cg_cardl %281%29.jpg" />
     <None Include="Resources\image 3barco.png" />
     <None Include="Resources\pirata.png" />

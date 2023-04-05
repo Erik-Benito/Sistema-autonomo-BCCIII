@@ -26,3 +26,17 @@ D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.pdb
 D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.dll
 D:\Apps\Cartagena\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.xml
 D:\Apps\Cartagena\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe.config
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.pdb
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.dll
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.xml
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.AssemblyReference.cache
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.ContainerInicial.resources
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.Properties.Resources.resources
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.GenerateResource.cache
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.exe
+C:\Users\gabri\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.pdb

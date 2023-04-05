@@ -1,8 +1,12 @@
 ﻿using CartagenaServer;
 using sistemaAutonomoBCCIII.Properties;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
+using System.Linq;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -97,6 +101,64 @@ namespace sistemaAutonomoBCCIII
 
         private void lblSenha_Click(object sender, EventArgs e) { }
 
+        public void GerarTabuleiro()
+        {
+            string casaPos = Jogo.ExibirTabuleiro(this.idPartida);
+
+            Panel panel = this.Controls.Find("panelTabuleiro", true).FirstOrDefault() as Panel;
+
+            int[] arrayX = {18, 18, 18, 80, 80, 80, 80, 80, 80, 142, 142, 142, 142, 142, 142, 204, 204, 204, 204, 204, 204, 264, 264, 264, 264, 264, 264, 324, 324, 324, 324, 324, 324, 386, 386, 386};
+            int[] arrayY = {108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78, 108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78, 108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78};
+
+            string[] casaTabuleiro = Jogo.ExibirTabuleiro(this.idPartida).Replace("\r\n", "").Split(',');
+            int length = casaTabuleiro.Length;
+
+            List<string> listaCasaTabuleiro = new List<string>(casaTabuleiro);
+
+            listaCasaTabuleiro.RemoveAt(38);
+            listaCasaTabuleiro.RemoveAt(0);
+            listaCasaTabuleiro.RemoveAt(0);
+
+            for (int i = 0; i < listaCasaTabuleiro.Count; i++)
+            {
+                string casa = listaCasaTabuleiro[i][0].ToString();
+
+                Panel picture = new Panel();
+
+                picture.Size = new Size(picture.Width = 20, picture.Height = 22);
+                picture.BackColor = Color.Beige;
+
+                switch (casa)
+                {
+                    case "E":
+                        picture.BackgroundImage = Properties.Resources.imgCaveira;
+                        break;
+
+                    case "F":
+                        picture.BackgroundImage = Properties.Resources.imgFaca;
+                        break;
+
+                    case "G":
+                        picture.BackgroundImage = Properties.Resources.imgGarrafa;
+                        break;
+
+                    case "C":
+                        picture.BackgroundImage = Properties.Resources.imgChave;
+                        break;
+
+                    case "T":
+                        picture.BackgroundImage = Properties.Resources.imgChapeu;
+                        break;
+
+                    case "P":
+                        picture.BackgroundImage = Properties.Resources.imgPistola;
+                        break;
+                }
+
+                picture.Location = new Point(arrayX[i], arrayY[i]);
+                panel.Controls.Add(picture);
+            }
+        }
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             string resposta = Jogo.IniciarPartida(this.idJogador, this.senhaJogador);
@@ -107,6 +169,7 @@ namespace sistemaAutonomoBCCIII
             this.getDadosDll.ListarPartidas();
             this.getDadosDll.ListarMao();
             this.getDadosDll.ListarPosicao();
+            GerarTabuleiro();
         }
 
         private void cartaTricornio_Click(object sender, EventArgs e)
@@ -170,5 +233,6 @@ namespace sistemaAutonomoBCCIII
         {
 
         }
+
     }
 }

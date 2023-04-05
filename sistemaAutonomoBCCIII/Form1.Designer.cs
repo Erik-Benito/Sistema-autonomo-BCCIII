@@ -55,16 +55,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnJogar = new System.Windows.Forms.Button();
             this.lblTricornio = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listBoxPosicoes = new System.Windows.Forms.ListBox();
+            this.txtPirataEscolhido = new System.Windows.Forms.TextBox();
+            this.listBoxPiratas1 = new System.Windows.Forms.ListBox();
             this.cartaTricornio = new System.Windows.Forms.PictureBox();
             this.cartaFaca = new System.Windows.Forms.PictureBox();
             this.cartaPistola = new System.Windows.Forms.PictureBox();
             this.cartaChave = new System.Windows.Forms.PictureBox();
             this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
             this.cartaGarrafa = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listBoxPosicoes = new System.Windows.Forms.ListBox();
-            this.txtPirataEscolhido = new System.Windows.Forms.TextBox();
-            this.listBoxPiratas1 = new System.Windows.Forms.ListBox();
+            this.panelTabuleiro = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
@@ -346,6 +347,50 @@
             this.lblTricornio.TabIndex = 33;
             this.lblTricornio.Text = "0";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(607, 331);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 39);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Suas cartas :";
+            // 
+            // listBoxPosicoes
+            // 
+            this.listBoxPosicoes.FormattingEnabled = true;
+            this.listBoxPosicoes.Location = new System.Drawing.Point(702, 23);
+            this.listBoxPosicoes.Name = "listBoxPosicoes";
+            this.listBoxPosicoes.Size = new System.Drawing.Size(335, 43);
+            this.listBoxPosicoes.TabIndex = 35;
+            this.listBoxPosicoes.SelectedIndexChanged += new System.EventHandler(this.listBoxPosicoes_SelectedIndexChanged);
+            // 
+            // txtPirataEscolhido
+            // 
+            this.txtPirataEscolhido.Location = new System.Drawing.Point(702, 284);
+            this.txtPirataEscolhido.Multiline = true;
+            this.txtPirataEscolhido.Name = "txtPirataEscolhido";
+            this.txtPirataEscolhido.Size = new System.Drawing.Size(152, 29);
+            this.txtPirataEscolhido.TabIndex = 36;
+            this.txtPirataEscolhido.TextChanged += new System.EventHandler(this.txtPirataEscolhido_TextChanged);
+            // 
+            // listBoxPiratas1
+            // 
+            this.listBoxPiratas1.FormattingEnabled = true;
+            this.listBoxPiratas1.Items.AddRange(new object[] {
+            "Pirata1",
+            "Pirata2",
+            "Pirata3",
+            "Pirata4",
+            "Pirata5",
+            "Pirata6"});
+            this.listBoxPiratas1.Location = new System.Drawing.Point(614, 23);
+            this.listBoxPiratas1.Name = "listBoxPiratas1";
+            this.listBoxPiratas1.Size = new System.Drawing.Size(82, 290);
+            this.listBoxPiratas1.TabIndex = 37;
+            this.listBoxPiratas1.SelectedIndexChanged += new System.EventHandler(this.listBoxPiratas1_SelectedIndexChanged);
+            // 
             // cartaTricornio
             // 
             this.cartaTricornio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -414,55 +459,20 @@
             this.cartaGarrafa.TabStop = false;
             this.cartaGarrafa.Click += new System.EventHandler(this.cartaGarrafa_Click);
             // 
-            // label7
+            // panelTabuleiro
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(607, 331);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 39);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Suas cartas :";
-            // 
-            // listBoxPosicoes
-            // 
-            this.listBoxPosicoes.FormattingEnabled = true;
-            this.listBoxPosicoes.Location = new System.Drawing.Point(792, 27);
-            this.listBoxPosicoes.Name = "listBoxPosicoes";
-            this.listBoxPosicoes.Size = new System.Drawing.Size(335, 186);
-            this.listBoxPosicoes.TabIndex = 35;
-            this.listBoxPosicoes.SelectedIndexChanged += new System.EventHandler(this.listBoxPosicoes_SelectedIndexChanged);
-            // 
-            // txtPirataEscolhido
-            // 
-            this.txtPirataEscolhido.Location = new System.Drawing.Point(792, 236);
-            this.txtPirataEscolhido.Multiline = true;
-            this.txtPirataEscolhido.Name = "txtPirataEscolhido";
-            this.txtPirataEscolhido.Size = new System.Drawing.Size(152, 82);
-            this.txtPirataEscolhido.TabIndex = 36;
-            this.txtPirataEscolhido.TextChanged += new System.EventHandler(this.txtPirataEscolhido_TextChanged);
-            // 
-            // listBoxPiratas1
-            // 
-            this.listBoxPiratas1.FormattingEnabled = true;
-            this.listBoxPiratas1.Items.AddRange(new object[] {
-            "Pirata1",
-            "Pirata2",
-            "Pirata3",
-            "Pirata4",
-            "Pirata5",
-            "Pirata6"});
-            this.listBoxPiratas1.Location = new System.Drawing.Point(614, 23);
-            this.listBoxPiratas1.Name = "listBoxPiratas1";
-            this.listBoxPiratas1.Size = new System.Drawing.Size(172, 290);
-            this.listBoxPiratas1.TabIndex = 37;
-            this.listBoxPiratas1.SelectedIndexChanged += new System.EventHandler(this.listBoxPiratas1_SelectedIndexChanged);
+            this.panelTabuleiro.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Tabuleiro1;
+            this.panelTabuleiro.Location = new System.Drawing.Point(703, 73);
+            this.panelTabuleiro.Name = "panelTabuleiro";
+            this.panelTabuleiro.Size = new System.Drawing.Size(425, 206);
+            this.panelTabuleiro.TabIndex = 38;
             // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.panelTabuleiro);
             this.Controls.Add(this.listBoxPiratas1);
             this.Controls.Add(this.txtPirataEscolhido);
             this.Controls.Add(this.listBoxPosicoes);
@@ -553,6 +563,7 @@
         public System.Windows.Forms.ListBox listBoxPosicoes;
         private System.Windows.Forms.TextBox txtPirataEscolhido;
         public System.Windows.Forms.ListBox listBoxPiratas1;
+        private System.Windows.Forms.Panel panelTabuleiro;
     }
 }
 

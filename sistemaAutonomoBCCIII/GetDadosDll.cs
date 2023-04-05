@@ -1,6 +1,9 @@
 ﻿using CartagenaServer;
 using sistemaAutonomoBCCIII.Properties;
 using System;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -23,6 +26,7 @@ namespace sistemaAutonomoBCCIII
 
             string resposta = Jogo.ListarPartidas("T");
             string[] partidas = this.tratamentos.stringsForArray(resposta);
+            Array.Reverse(partidas);
 
             foreach (string partida in partidas)
                 this.containerInicial.listBoxPartidas.Items.Add(partida);

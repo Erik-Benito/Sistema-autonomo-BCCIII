@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adversario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,7 @@
   <ItemGroup>
     <Content Include="dll\CartagenaServer.dll" />
     <Content Include="dll\CartagenaServer.xml" />
+    <None Include="Resources\1f535.png" />
     <Content Include="Resources\imgCaveira.jpg" />
     <Content Include="Resources\imgChapeu.png" />
     <Content Include="Resources\imgChave.png" />

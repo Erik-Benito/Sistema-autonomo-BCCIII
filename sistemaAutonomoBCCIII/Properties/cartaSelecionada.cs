@@ -10,12 +10,11 @@ namespace sistemaAutonomoBCCIII.Properties
     public class ControleCarta
     {
         public ContainerInicial containerInicial;
-        public string cartaSelecionada;
+        // @ para indicar para que o não há um carta selecionado, desculpe mas esse é o padrão do codigo do professor.
+        public string cartaSelecionada = "@";
 
         public ControleCarta(ContainerInicial containerInicial)
-        {
-            this.containerInicial = containerInicial;
-        }
+        { this.containerInicial = containerInicial; }
 
         private void limparCorCartas()
         {
@@ -47,17 +46,16 @@ namespace sistemaAutonomoBCCIII.Properties
         }
 
         public void selecionarCarta(string cartaSelecionada)
-        { 
-            if(cartaSelecionada == this.cartaSelecionada)
+        {
+            this.limparCorCartas();
+
+            if (cartaSelecionada == this.cartaSelecionada)
             {
-                this.cartaSelecionada = "";
-                this.limparCorCartas();
+                this.cartaSelecionada = "@";
                 return;
             }
-
+            
             this.cartaSelecionada = cartaSelecionada;
-
-            this.limparCorCartas();
 
             switch (this.cartaSelecionada)
             {

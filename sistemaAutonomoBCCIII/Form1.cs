@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -184,17 +185,28 @@ namespace sistemaAutonomoBCCIII
             
             if(!this.statusJogando)
             {
+                this.statusJogando = true;
+
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
+                string idJogador = this.idJogador.ToString();
 
-                if (ids.Length > 0)
-                    adversario1 = new Adversario(this, 1, Convert.ToInt32(ids[0]));
-                if (ids.Length > 1)
-                    adversario2 = new Adversario(this, 2, Convert.ToInt32(ids[1]));
-                if (ids.Length > 2)
-                    adversario3 = new Adversario(this, 3, Convert.ToInt32(ids[2]));
-                if (ids.Length > 3)
-                    adversario4 = new Adversario(this, 4, Convert.ToInt32(ids[3]));
+                foreach (string jogador in ids)
+                {
+                    if (jogador == "") return; 
 
+                    int jogadorAdversarioId = Convert.ToInt32(jogador.Substring(0, jogador.IndexOf(",")));
+                    if (!jogador.Contains(idJogador) && adversario1 == null)
+                        adversario1 = new Adversario(this, 1, jogadorAdversarioId);
+
+                    if (!jogador.Contains(idJogador) && adversario2 == null)
+                        adversario2 = new Adversario(this, 2, jogadorAdversarioId);
+
+                    if (!jogador.Contains(idJogador) && adversario3 == null)
+                        adversario3 = new Adversario(this, 3, jogadorAdversarioId);
+
+                    if (!jogador.Contains(idJogador) && adversario4 == null)
+                        adversario4 = new Adversario(this, 4, jogadorAdversarioId);
+                }
             }
 
 

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -14,8 +16,11 @@ namespace sistemaAutonomoBCCIII
 
         public string[] stringsForArray(string resposta)
         {
+            List<string> strings = new List<string>();
             resposta.Replace("\r", "");
-            return resposta.Split('\n');
+            strings = resposta.Split('\n').ToList();
+            strings.RemoveAt(strings.Count - 1);
+            return strings.ToArray();
         }
 
         public int getIdString(string resposta)

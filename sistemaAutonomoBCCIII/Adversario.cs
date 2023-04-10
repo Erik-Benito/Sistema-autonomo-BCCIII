@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 using System.Windows.Forms;
 using static sistemaAutonomoBCCIII.Properties.ControlePirata;
 
@@ -18,7 +19,7 @@ namespace sistemaAutonomoBCCIII
 
         public int id;
         private List<pirata> piratas;
-        public string ultimaAtt;
+        public string ultimaAtt = "";
 
 
         public Adversario(ContainerInicial containerInicial, int adversarioNumero, int id)
@@ -81,16 +82,14 @@ namespace sistemaAutonomoBCCIII
         {
             string resposta = Jogo.ExibirHistorico(this.containerInicial.idPartida);
 
-            if (this.tratamentos.ehErro(resposta)) return;
+            if (this.tratamentos.ehErro(resposta) || String.IsNullOrEmpty(resposta)) return;
 
-            string[] historico = this.tratamentos.stringsForArray(resposta);
-            string ultimoItem = historico[historico.Length - 1];
-
-
-            this.getDadosDll.ListarMao();
-
+            List<string> historico = this.tratamentos.stringsForArray(resposta).ToList();
+            string ultimoItem = historico.Last();
+            
             if (ultimoItem.Contains(this.id.ToString()) && ultimoItem != ultimaAtt)
             {
+                MessageBox.Show("ATT POSIÇÃO DO AD");
                 ultimaAtt = ultimoItem;
 
                 int novaPosicao = this.tratamentos.pegarPosicao(resposta);

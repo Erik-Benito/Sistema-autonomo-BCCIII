@@ -183,9 +183,11 @@ namespace sistemaAutonomoBCCIII
             string resposta = Jogo.VerificarVez(this.idPartida);
 
             if (resposta[0] != 'J') return;
-            
-            if(this.crioiAdversario)
+
+
+            if (this.crioiAdversario)
             {
+                this.getDadosDll.GerarTabuleiro();
                 this.crioiAdversario = false;
 
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
@@ -208,6 +210,8 @@ namespace sistemaAutonomoBCCIII
                     if (!jogador.Contains(idJogador) && adversario4 == null)
                         adversario4 = new Adversario(this, 4, jogadorAdversarioId);
                 }
+
+
             }
             else
             {

@@ -90,6 +90,9 @@ namespace sistemaAutonomoBCCIII
                 ultimaAtt = historico[historico.Length];
 
                 int novaPosicao = this.tratamentos.pegarPosicao(resposta);
+
+                if(novaPosicao == 0) { return; }
+
                 Point posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1).posicaXY;
 
                 pirata pirataAtt = piratas.Find(p => p.posicao == novaPosicao);

@@ -64,12 +64,12 @@
             this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
             this.cartaGarrafa = new System.Windows.Forms.PictureBox();
             this.panelTabuleiro = new System.Windows.Forms.Panel();
-            this.imgPirata5 = new System.Windows.Forms.Panel();
-            this.imgPirata4 = new System.Windows.Forms.Panel();
-            this.imgPirata3 = new System.Windows.Forms.Panel();
-            this.imgPirata2 = new System.Windows.Forms.Panel();
-            this.imgPirata1 = new System.Windows.Forms.Panel();
             this.imgPirata0 = new System.Windows.Forms.Panel();
+            this.imgPirata1 = new System.Windows.Forms.Panel();
+            this.imgPirata2 = new System.Windows.Forms.Panel();
+            this.imgPirata5 = new System.Windows.Forms.Panel();
+            this.imgPirata3 = new System.Windows.Forms.Panel();
+            this.imgPirata4 = new System.Windows.Forms.Panel();
             this.ad2Img4 = new System.Windows.Forms.Panel();
             this.ad2Img3 = new System.Windows.Forms.Panel();
             this.ad2Img2 = new System.Windows.Forms.Panel();
@@ -470,6 +470,39 @@
             this.panelTabuleiro.Size = new System.Drawing.Size(427, 231);
             this.panelTabuleiro.TabIndex = 38;
             // 
+            // imgPirata0
+            // 
+            this.imgPirata0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
+            this.imgPirata0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata0.Location = new System.Drawing.Point(3, 3);
+            this.imgPirata0.Name = "imgPirata0";
+            this.imgPirata0.Size = new System.Drawing.Size(25, 26);
+            this.imgPirata0.TabIndex = 39;
+            this.imgPirata0.Click += new System.EventHandler(this.imgPirata0_Click);
+            this.imgPirata0.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata0_Paint);
+            // 
+            // imgPirata1
+            // 
+            this.imgPirata1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
+            this.imgPirata1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata1.Location = new System.Drawing.Point(3, 35);
+            this.imgPirata1.Name = "imgPirata1";
+            this.imgPirata1.Size = new System.Drawing.Size(25, 26);
+            this.imgPirata1.TabIndex = 40;
+            this.imgPirata1.Click += new System.EventHandler(this.imgPirata1_Click);
+            this.imgPirata1.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata1_Paint);
+            // 
+            // imgPirata2
+            // 
+            this.imgPirata2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
+            this.imgPirata2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata2.Location = new System.Drawing.Point(3, 67);
+            this.imgPirata2.Name = "imgPirata2";
+            this.imgPirata2.Size = new System.Drawing.Size(25, 26);
+            this.imgPirata2.TabIndex = 40;
+            this.imgPirata2.Click += new System.EventHandler(this.imgPirata2_Click);
+            this.imgPirata2.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata2_Paint);
+            // 
             // imgPirata5
             // 
             this.imgPirata5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -483,17 +516,6 @@
             this.imgPirata5.Click += new System.EventHandler(this.imgPirata5_Click);
             this.imgPirata5.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata5_Paint);
             // 
-            // imgPirata4
-            // 
-            this.imgPirata4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata4.Location = new System.Drawing.Point(34, 35);
-            this.imgPirata4.Name = "imgPirata4";
-            this.imgPirata4.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata4.TabIndex = 40;
-            this.imgPirata4.Click += new System.EventHandler(this.imgPirata4_Click);
-            this.imgPirata4.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata4_Paint);
-            // 
             // imgPirata3
             // 
             this.imgPirata3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
@@ -505,38 +527,16 @@
             this.imgPirata3.Click += new System.EventHandler(this.imgPirata3_Click);
             this.imgPirata3.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata3_Paint);
             // 
-            // imgPirata2
+            // imgPirata4
             // 
-            this.imgPirata2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata2.Location = new System.Drawing.Point(3, 67);
-            this.imgPirata2.Name = "imgPirata2";
-            this.imgPirata2.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata2.TabIndex = 40;
-            this.imgPirata2.Click += new System.EventHandler(this.imgPirata2_Click);
-            this.imgPirata2.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata2_Paint);
-            // 
-            // imgPirata1
-            // 
-            this.imgPirata1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata1.Location = new System.Drawing.Point(3, 35);
-            this.imgPirata1.Name = "imgPirata1";
-            this.imgPirata1.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata1.TabIndex = 40;
-            this.imgPirata1.Click += new System.EventHandler(this.imgPirata1_Click);
-            this.imgPirata1.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata1_Paint);
-            // 
-            // imgPirata0
-            // 
-            this.imgPirata0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata0.Location = new System.Drawing.Point(3, 3);
-            this.imgPirata0.Name = "imgPirata0";
-            this.imgPirata0.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata0.TabIndex = 39;
-            this.imgPirata0.Click += new System.EventHandler(this.imgPirata0_Click);
-            this.imgPirata0.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata0_Paint);
+            this.imgPirata4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
+            this.imgPirata4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata4.Location = new System.Drawing.Point(34, 35);
+            this.imgPirata4.Name = "imgPirata4";
+            this.imgPirata4.Size = new System.Drawing.Size(25, 26);
+            this.imgPirata4.TabIndex = 40;
+            this.imgPirata4.Click += new System.EventHandler(this.imgPirata4_Click);
+            this.imgPirata4.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata4_Paint);
             // 
             // ad2Img4
             // 
@@ -674,6 +674,7 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 

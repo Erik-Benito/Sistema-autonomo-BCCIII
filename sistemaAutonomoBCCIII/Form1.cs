@@ -21,7 +21,7 @@ namespace sistemaAutonomoBCCIII
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
-        public bool statusJogando;
+        public bool crioiAdversario = true;
 
         public Adversario adversario1;
         public Adversario adversario2;
@@ -150,7 +150,8 @@ namespace sistemaAutonomoBCCIII
             this.getDadosDll.ListarMao();
 
             string historico = Jogo.ExibirHistorico(this.idPartida);
-            int novaPosicao = this.tratamentos.pegarPosicao(historico);
+            int posicao = this.tratamentos.pegarPosicao(historico);
+            int novaPosicao = posicao  == 0 ? this.controlePirata.pirataSelecionado.posicao : posicao;
 
             if (this.tratamentos.ehErro(historico))
                 return;
@@ -183,9 +184,9 @@ namespace sistemaAutonomoBCCIII
 
             if (resposta[0] != 'J') return;
             
-            if(!this.statusJogando)
+            if(this.crioiAdversario)
             {
-                this.statusJogando = true;
+                this.crioiAdversario = false;
 
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
                 string idJogador = this.idJogador.ToString();
@@ -207,6 +208,17 @@ namespace sistemaAutonomoBCCIII
                     if (!jogador.Contains(idJogador) && adversario4 == null)
                         adversario4 = new Adversario(this, 4, jogadorAdversarioId);
                 }
+            }
+            else
+            {
+                if (adversario1 != null)
+                    adversario1.atualizarPosicao();
+                if (adversario2 != null)
+                    adversario2.atualizarPosicao();
+                if (adversario3 != null)
+                    adversario3.atualizarPosicao();
+                if (adversario4 != null)
+                    adversario4.atualizarPosicao();
             }
 
 

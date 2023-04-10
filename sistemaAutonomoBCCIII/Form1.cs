@@ -240,5 +240,9 @@ namespace sistemaAutonomoBCCIII
         private void imgPirata5_Paint(object sender, PaintEventArgs e) { }
         private void listBoxPartidas_SelectedIndexChanged(object sender, EventArgs e) { }
 
+        private void attPts_Click(object sender, EventArgs e)
+        {
+            this.getDadosDll.ListarPartidas();
+        }
     }
 }

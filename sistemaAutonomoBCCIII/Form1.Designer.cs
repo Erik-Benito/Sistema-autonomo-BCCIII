@@ -95,6 +95,7 @@
             this.ad4Img5 = new System.Windows.Forms.Panel();
             this.ad4Img1 = new System.Windows.Forms.Panel();
             this.ad4Img0 = new System.Windows.Forms.Panel();
+            this.attPts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
@@ -812,11 +813,23 @@
             this.ad4Img0.Size = new System.Drawing.Size(25, 26);
             this.ad4Img0.TabIndex = 47;
             // 
+            // attPts
+            // 
+            this.attPts.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.attPts.Location = new System.Drawing.Point(147, 56);
+            this.attPts.Name = "attPts";
+            this.attPts.Size = new System.Drawing.Size(40, 35);
+            this.attPts.TabIndex = 53;
+            this.attPts.Text = "🌀";
+            this.attPts.UseVisualStyleBackColor = true;
+            this.attPts.Click += new System.EventHandler(this.attPts_Click);
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.attPts);
             this.Controls.Add(this.ad4Img4);
             this.Controls.Add(this.ad3Img4);
             this.Controls.Add(this.ad4Img3);
@@ -959,6 +972,7 @@
         public System.Windows.Forms.Panel ad4Img5;
         public System.Windows.Forms.Panel ad4Img1;
         public System.Windows.Forms.Panel ad4Img0;
+        private System.Windows.Forms.Button attPts;
     }
 }
 

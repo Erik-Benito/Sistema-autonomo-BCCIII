@@ -84,10 +84,14 @@ namespace sistemaAutonomoBCCIII
             if (this.tratamentos.ehErro(resposta)) return;
 
             string[] historico = this.tratamentos.stringsForArray(resposta);
-            
-            if (historico[historico.Length].Contains(this.id.ToString()) && historico[historico.Length] != ultimaAtt)
+            string ultimoItem = historico[historico.Length - 1];
+
+
+            this.getDadosDll.ListarMao();
+
+            if (ultimoItem.Contains(this.id.ToString()) && ultimoItem != ultimaAtt)
             {
-                ultimaAtt = historico[historico.Length];
+                ultimaAtt = ultimoItem;
 
                 int novaPosicao = this.tratamentos.pegarPosicao(resposta);
 
@@ -101,6 +105,7 @@ namespace sistemaAutonomoBCCIII
 
                 piratas[pirataAtt.id] = pirataAtt;
             }
+
         }
     }
 }

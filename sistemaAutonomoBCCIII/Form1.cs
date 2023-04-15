@@ -220,6 +220,8 @@ namespace sistemaAutonomoBCCIII
 
             }
 
+
+
             if (adversario1 != null)
                 adversario1.atualizarPosicao(resposta);
             if (adversario2 != null)

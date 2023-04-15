@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using System.Windows.Forms;
 using static sistemaAutonomoBCCIII.Properties.ControlePirata;
 using static sistemaAutonomoBCCIII.GetDadosDll;

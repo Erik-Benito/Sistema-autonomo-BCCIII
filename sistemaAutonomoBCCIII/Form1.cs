@@ -120,6 +120,8 @@ namespace sistemaAutonomoBCCIII
             this.getDadosDll.ListarMao();
             this.getDadosDll.ListarPartidas();
             this.getDadosDll.GerarTabuleiro();
+
+            this.timer1.Enabled= true;
         }
 
         private void cartaTricornio_Click(object sender, EventArgs e)
@@ -180,14 +182,19 @@ namespace sistemaAutonomoBCCIII
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string resposta = Jogo.VerificarVez(this.idPartida);
 
-            if (resposta[0] != 'J') return;
+            if (!this.crioiAdversario)
+            {
+                string statusPartida = Jogo.VerificarVez(this.idPartida);
+                if (statusPartida[0] != 'J') return;
+            }
 
-
+            string resposta = Jogo.ExibirHistorico(this.idPartida);
             if (this.crioiAdversario)
             {
                 this.getDadosDll.GerarTabuleiro();
+                this.getDadosDll.ListarMao();
+
                 this.crioiAdversario = false;
 
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
@@ -211,19 +218,16 @@ namespace sistemaAutonomoBCCIII
                         adversario4 = new Adversario(this, 4, jogadorAdversarioId);
                 }
 
+            }
 
-            }
-            else
-            {
-                if (adversario1 != null)
-                    adversario1.atualizarPosicao();
-                if (adversario2 != null)
-                    adversario2.atualizarPosicao();
-                if (adversario3 != null)
-                    adversario3.atualizarPosicao();
-                if (adversario4 != null)
-                    adversario4.atualizarPosicao();
-            }
+            if (adversario1 != null)
+                adversario1.atualizarPosicao(resposta);
+            if (adversario2 != null)
+                adversario2.atualizarPosicao(resposta);
+            if (adversario3 != null)
+                adversario3.atualizarPosicao(resposta);
+            if (adversario4 != null)
+                adversario4.atualizarPosicao(resposta);
 
 
         }

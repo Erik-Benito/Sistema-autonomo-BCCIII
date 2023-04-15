@@ -91,7 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dll\CartagenaServer.dll" />
+    <EmbeddedResource Include="dll\CartagenaServer.dll" />
     <Content Include="dll\CartagenaServer.xml" />
     <None Include="Resources\1f535.png" />
     <Content Include="Resources\imgCaveira.jpg" />

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Windows.Forms;
 using static sistemaAutonomoBCCIII.Properties.ControlePirata;
+using static sistemaAutonomoBCCIII.GetDadosDll;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -78,9 +79,8 @@ namespace sistemaAutonomoBCCIII
             this.id = id;
         }
 
-        public void atualizarPosicao()
+        public void atualizarPosicao(string resposta)
         {
-            string resposta = Jogo.ExibirHistorico(this.containerInicial.idPartida);
 
             if (this.tratamentos.ehErro(resposta) || String.IsNullOrEmpty(resposta)) return;
 
@@ -89,18 +89,18 @@ namespace sistemaAutonomoBCCIII
             
             if (ultimoItem.Contains(this.id.ToString()) && ultimoItem != ultimaAtt)
             {
-                MessageBox.Show("ATT POSIÇÃO DO AD");
                 ultimaAtt = ultimoItem;
 
                 int novaPosicao = this.tratamentos.pegarPosicao(resposta);
 
                 if(novaPosicao == 0) { return; }
 
-                Point posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1).posicaXY;
-
-                pirata pirataAtt = piratas.Find(p => p.posicao == novaPosicao);
-                pirataAtt.img.Location = posicaoXYpirata;
-                pirataAtt.posicao = novaPosicao;
+                posicaoItem posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1);
+                string[] partes = ultimoItem.Split(',');
+                
+                pirata pirataAtt = piratas.Find(p => p.posicao == Convert.ToInt32(partes[3]));
+                pirataAtt.img.Location = posicaoXYpirata.posicaXY;
+                pirataAtt.posicao = posicaoXYpirata.posicao;
 
                 piratas[pirataAtt.id] = pirataAtt;
             }

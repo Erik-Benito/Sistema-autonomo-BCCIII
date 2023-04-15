@@ -675,7 +675,6 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -959,7 +958,6 @@
         public System.Windows.Forms.Panel ad1Img5;
         public System.Windows.Forms.Panel ad1Img1;
         public System.Windows.Forms.Panel ad1Img0;
-        private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Panel ad3Img4;
         public System.Windows.Forms.Panel ad3Img2;
         public System.Windows.Forms.Panel ad3Img3;
@@ -973,6 +971,7 @@
         public System.Windows.Forms.Panel ad4Img1;
         public System.Windows.Forms.Panel ad4Img0;
         private System.Windows.Forms.Button attPts;
+        public System.Windows.Forms.Timer timer1;
     }
 }
 

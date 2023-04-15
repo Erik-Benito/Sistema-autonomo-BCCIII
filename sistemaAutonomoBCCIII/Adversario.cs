@@ -101,6 +101,9 @@ namespace sistemaAutonomoBCCIII
                 pirataAtt.img.Location = posicaoXYpirata.posicaXY;
                 pirataAtt.posicao = posicaoXYpirata.posicao;
 
+                this.containerInicial.panelTabuleiro.Controls.Remove(piratas[pirataAtt.id].img);
+                this.containerInicial.panelTabuleiro.Controls.Add(pirataAtt.img);
+
                 piratas[pirataAtt.id] = pirataAtt;
             }
 

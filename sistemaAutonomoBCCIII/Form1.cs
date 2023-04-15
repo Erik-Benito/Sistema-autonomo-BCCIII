@@ -182,14 +182,11 @@ namespace sistemaAutonomoBCCIII
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            if (!this.crioiAdversario)
-            {
-                string statusPartida = Jogo.VerificarVez(this.idPartida);
-                if (statusPartida[0] != 'J') return;
-            }
-
+            string statusPartida = Jogo.VerificarVez(this.idPartida);
+            if (statusPartida[0] != 'J') return;
+           
             string resposta = Jogo.ExibirHistorico(this.idPartida);
+
             if (this.crioiAdversario)
             {
                 this.getDadosDll.GerarTabuleiro();
@@ -202,20 +199,29 @@ namespace sistemaAutonomoBCCIII
 
                 foreach (string jogador in ids)
                 {
-                    if (jogador == "") return; 
+                    if (jogador == "") return;
 
                     int jogadorAdversarioId = Convert.ToInt32(jogador.Substring(0, jogador.IndexOf(",")));
                     if (!jogador.Contains(idJogador) && adversario1 == null)
+                    { 
                         adversario1 = new Adversario(this, 1, jogadorAdversarioId);
-
+                        break;
+                    }
                     if (!jogador.Contains(idJogador) && adversario2 == null)
+                    {
                         adversario2 = new Adversario(this, 2, jogadorAdversarioId);
-
+                        break;
+                    }
                     if (!jogador.Contains(idJogador) && adversario3 == null)
+                    {
                         adversario3 = new Adversario(this, 3, jogadorAdversarioId);
-
+                        break;
+                    }
                     if (!jogador.Contains(idJogador) && adversario4 == null)
+                    {
                         adversario4 = new Adversario(this, 4, jogadorAdversarioId);
+                        break;
+                    }
                 }
 
             }

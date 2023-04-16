@@ -38,34 +38,66 @@ namespace sistemaAutonomoBCCIII
 
         public void ListarPartidas()
         {
-            this.containerInicial.listBoxPartidas.Items.Clear();
+            try
+            {
+                this.containerInicial.listBoxPartidas.Items.Clear();
 
-            string resposta = Jogo.ListarPartidas("T");
-            string[] partidas = this.tratamentos.stringsForArray(resposta);
-            Array.Reverse(partidas);
+                string resposta = Jogo.ListarPartidas("T");
 
-            foreach (string partida in partidas)
-                this.containerInicial.listBoxPartidas.Items.Add(partida);
+                if (this.tratamentos.ehErro(resposta)) return;
+
+                string[] partidas = this.tratamentos.stringsForArray(resposta);
+                Array.Reverse(partidas);
+
+                foreach (string partida in partidas)
+                    this.containerInicial.listBoxPartidas.Items.Add(partida);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar listar as Partidas, por favor tente novamente");
+            }
         }
 
         public void ListarPlayers()
         {
-            this.containerInicial.listBoxPlayers.Items.Clear();
 
-            string resposta = Jogo.ListarJogadores(this.containerInicial.idPartida);
-            string[] jogadores = this.tratamentos.stringsForArray(resposta);
+            try
+            {
+                this.containerInicial.listBoxPlayers.Items.Clear();
 
-            foreach (string jogador in jogadores)
-                this.containerInicial.listBoxPlayers.Items.Add(jogador);
+                string resposta = Jogo.ListarJogadores(this.containerInicial.idPartida);
+
+                if (this.tratamentos.ehErro(resposta)) return;
+
+                string[] jogadores = this.tratamentos.stringsForArray(resposta);
+
+                foreach (string jogador in jogadores)
+                    this.containerInicial.listBoxPlayers.Items.Add(jogador);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar listar os jogadores, por favor tente novamente");
+            }
+
+
         }
 
         public void ListarMao()
         {
-            string cartas = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
+            try
+            {
+                string cartas = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
 
-            if (this.tratamentos.ehErro(cartas)) return;
+                if (this.tratamentos.ehErro(cartas)) return;
 
-            this.controleCarta.setCartas(cartas);
+                this.controleCarta.setCartas(cartas);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar listar a cartas do jogador, por favor tente novamente");
+            }
+
         }
 
         public void GerarTabuleiro()
@@ -73,7 +105,18 @@ namespace sistemaAutonomoBCCIII
             int[] arrayX = { 18, 18, 18, 80, 80, 80, 80, 80, 80, 142, 142, 142, 142, 142, 142, 204, 204, 204, 204, 204, 204, 264, 264, 264, 264, 264, 264, 324, 324, 324, 324, 324, 324, 386, 386, 386 };
             int[] arrayY = { 108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78, 108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78, 108, 138, 168, 168, 138, 108, 78, 48, 18, 18, 48, 78 };
 
-            string resposta = Jogo.ExibirTabuleiro(this.containerInicial.idPartida);
+            string resposta = "";
+
+            try
+            {
+                resposta = Jogo.ExibirTabuleiro(this.containerInicial.idPartida);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar as cartas do tabuleiro, por favor tente novamente");
+            }
+
+
             if (this.tratamentos.ehErro(resposta)) return;
 
             List<string> listaCartaTabuleiro = new List<string>(this.tratamentos.stringsForArrayVirgula(resposta));

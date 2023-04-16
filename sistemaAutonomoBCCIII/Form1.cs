@@ -8,6 +8,8 @@ using System.IO;
 using System.Reflection;
 using System.Linq;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.ComponentModel.Design;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -21,7 +23,7 @@ namespace sistemaAutonomoBCCIII
         public int idPartida;
         public int idJogador;
         public string senhaJogador;
-        public bool crioiAdversario = true;
+        public bool criouAdversario = false;
 
         public Adversario adversario1;
         public Adversario adversario2;
@@ -65,7 +67,17 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            string resposta = Jogo.CriarPartida(nome, senha);
+            string resposta = "";
+
+            try
+            {
+                resposta = Jogo.CriarPartida(nome, senha);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar criar a partida, por favor tente novamente");
+                return;
+            }
 
             if (this.tratamentos.ehErro(resposta)) return;
 
@@ -92,7 +104,17 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            string resposta = Jogo.EntrarPartida(this.idPartida, nome, senha);
+            string resposta = "";
+
+            try
+            {
+                resposta = Jogo.EntrarPartida(this.idPartida, nome, senha);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar entrar na Partidas, por favor tente novamente");
+                return;
+            }
             
             if (this.tratamentos.ehErro(resposta))
                 return;
@@ -112,7 +134,17 @@ namespace sistemaAutonomoBCCIII
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            string resposta = Jogo.IniciarPartida(this.idJogador, this.senhaJogador);
+            string resposta = "";
+
+            try
+            {
+                resposta = Jogo.IniciarPartida(this.idJogador, this.senhaJogador);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar inciar a partida, por favor tente novamente");
+                return;
+            }
 
             if (this.tratamentos.ehErro(resposta))
                 return;
@@ -144,14 +176,30 @@ namespace sistemaAutonomoBCCIII
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            string resposta = Jogo.Jogar(this.idJogador, this.senhaJogador, this.controlePirata.pirataSelecionado.posicao, this.controleCarta.cartaSelecionada);
+            string resposta = "";
+
+            try
+            { resposta = Jogo.Jogar(this.idJogador, this.senhaJogador, this.controlePirata.pirataSelecionado.posicao, this.controleCarta.cartaSelecionada); }
+            catch (Exception)
+            { 
+                MessageBox.Show("Houve um erro ao tentar entrar na Partidas, por favor tente novamente");
+                return;
+            }
 
             if (this.tratamentos.ehErro(resposta))
                 return;
 
-            this.getDadosDll.ListarMao();
+            
+            string historico = "";
 
-            string historico = Jogo.ExibirHistorico(this.idPartida);
+            try
+            { historico = Jogo.ExibirHistorico(this.idPartida); }
+            catch (Exception)
+            { 
+                MessageBox.Show("Houve um erro ao tentar atualizar a partida, por favor tente novamente"); 
+                return; 
+            }
+
             int posicao = this.tratamentos.pegarPosicao(historico);
             int novaPosicao = posicao  == 0 ? this.controlePirata.pirataSelecionado.posicao : posicao;
 
@@ -182,17 +230,30 @@ namespace sistemaAutonomoBCCIII
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string statusPartida = Jogo.VerificarVez(this.idPartida);
-            if (statusPartida[0] != 'J') return;
-           
-            string resposta = Jogo.ExibirHistorico(this.idPartida);
+            string statusPartida = "";
 
-            if (this.crioiAdversario)
+            try
+            { statusPartida = Jogo.VerificarVez(this.idPartida); }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar verificar vez");
+                return;
+            }
+            
+            if (this.tratamentos.ehErro(statusPartida)) return;
+
+            string[] infosPartida = statusPartida.Split(',');
+
+            if (infosPartida[0] != "J") this.criouAdversario = true;
+            if (infosPartida[0] == "E") MessageBox.Show("A partida foi encerrada");
+            this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
+            
+            if (this.criouAdversario)
             {
                 this.getDadosDll.GerarTabuleiro();
                 this.getDadosDll.ListarMao();
 
-                this.crioiAdversario = false;
+                this.criouAdversario = false;
 
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
                 string idJogador = this.idJogador.ToString();
@@ -226,7 +287,16 @@ namespace sistemaAutonomoBCCIII
 
             }
 
-
+            string resposta;
+            try
+            {
+                resposta = Jogo.ExibirHistorico(this.idPartida);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Houve um erro ao tentar atualizar a partida, por favor tente novamente");
+                return;
+            }
 
             if (adversario1 != null)
                 adversario1.atualizarPosicao(resposta);

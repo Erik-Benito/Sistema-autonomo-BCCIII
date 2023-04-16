@@ -96,6 +96,7 @@
             this.ad4Img1 = new System.Windows.Forms.Panel();
             this.ad4Img0 = new System.Windows.Forms.Panel();
             this.attPts = new System.Windows.Forms.Button();
+            this.btnVez = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
@@ -823,11 +824,22 @@
             this.attPts.UseVisualStyleBackColor = true;
             this.attPts.Click += new System.EventHandler(this.attPts_Click);
             // 
+            // btnVez
+            // 
+            this.btnVez.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.btnVez.Location = new System.Drawing.Point(1058, 21);
+            this.btnVez.Name = "btnVez";
+            this.btnVez.Size = new System.Drawing.Size(83, 70);
+            this.btnVez.TabIndex = 54;
+            this.btnVez.Text = "🫵";
+            this.btnVez.UseVisualStyleBackColor = true;
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.btnVez);
             this.Controls.Add(this.attPts);
             this.Controls.Add(this.ad4Img4);
             this.Controls.Add(this.ad3Img4);
@@ -972,6 +984,7 @@
         public System.Windows.Forms.Panel ad4Img0;
         private System.Windows.Forms.Button attPts;
         public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Button btnVez;
     }
 }
 

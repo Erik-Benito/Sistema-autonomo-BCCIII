@@ -99,7 +99,7 @@ namespace sistemaAutonomoBCCIII
                 
                 pirata pirataAtt = piratas.Find(p => p.posicao == Convert.ToInt32(partes[3]));
                 pirataAtt.img.Location = posicaoXYpirata.posicaXY;
-                pirataAtt.posicao = posicaoXYpirata.posicao;
+                pirataAtt.posicao = novaPosicao;
 
                 this.containerInicial.panelTabuleiro.Controls.Remove(piratas[pirataAtt.id].img);
                 this.containerInicial.panelTabuleiro.Controls.Add(pirataAtt.img);

@@ -176,7 +176,7 @@ namespace sistemaAutonomoBCCIII
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            string resposta = "";
+            string resposta;
 
             try
             { resposta = Jogo.Jogar(this.idJogador, this.senhaJogador, this.controlePirata.pirataSelecionado.posicao, this.controleCarta.cartaSelecionada); }
@@ -246,7 +246,11 @@ namespace sistemaAutonomoBCCIII
             string[] infosPartida = statusPartida.Split(',');
 
             if (infosPartida[0] != "J") this.criouAdversario = true;
-            if (infosPartida[0] == "E") MessageBox.Show("A partida foi encerrada");
+            if (infosPartida[0] == "E")
+            {
+                MessageBox.Show("A partida foi encerrada");
+                this.timer1.Enabled = false;
+            }
             this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
             
             if (this.criouAdversario)

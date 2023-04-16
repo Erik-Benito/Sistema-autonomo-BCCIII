@@ -207,6 +207,7 @@ namespace sistemaAutonomoBCCIII
                 return;
 
             this.controlePirata.SetPosicao(this.controlePirata.pirataSelecionado.id, novaPosicao);
+            this.getDadosDll.ListarMao();
         }
 
         private void imgPirata0_Click(object sender, EventArgs e)

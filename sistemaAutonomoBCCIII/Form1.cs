@@ -272,22 +272,22 @@ namespace sistemaAutonomoBCCIII
                     if (!jogador.Contains(idJogador) && adversario1 == null)
                     { 
                         adversario1 = new Adversario(this, 1, jogadorAdversarioId);
-                        break;
+                        continue;
                     }
                     if (!jogador.Contains(idJogador) && adversario2 == null)
                     {
                         adversario2 = new Adversario(this, 2, jogadorAdversarioId);
-                        break;
+                        continue;
                     }
                     if (!jogador.Contains(idJogador) && adversario3 == null)
                     {
                         adversario3 = new Adversario(this, 3, jogadorAdversarioId);
-                        break;
+                        continue;
                     }
                     if (!jogador.Contains(idJogador) && adversario4 == null)
                     {
                         adversario4 = new Adversario(this, 4, jogadorAdversarioId);
-                        break;
+                        continue;   
                     }
                 }
 

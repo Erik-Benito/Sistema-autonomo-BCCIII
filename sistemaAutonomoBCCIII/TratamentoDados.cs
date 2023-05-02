@@ -19,7 +19,9 @@ namespace sistemaAutonomoBCCIII
             List<string> strings = new List<string>();
             resposta.Replace("\r", "");
             strings = resposta.Split('\n').ToList();
-            strings.RemoveAt(strings.Count - 1);
+            
+           strings.RemoveAt(strings.Count - 1);
+            
             return strings.ToArray();
         }
 

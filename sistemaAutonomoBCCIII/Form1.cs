@@ -24,6 +24,7 @@ namespace sistemaAutonomoBCCIII
         public int idJogador;
         public string senhaJogador;
         public bool criouAdversario = false;
+        public bool partidaEmAndamento = false;
 
         public Adversario adversario1;
         public Adversario adversario2;
@@ -241,11 +242,11 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
             
-            if (this.tratamentos.ehErro(statusPartida)) return;
+            if (this.tratamentos.ehErro(statusPartida, false)) return;
 
             string[] infosPartida = statusPartida.Split(',');
 
-            if (infosPartida[0] != "J") this.criouAdversario = true;
+            if (infosPartida[0] == "J") this.partidaEmAndamento = true;
             if (infosPartida[0] == "E")
             {
                 MessageBox.Show("A partida foi encerrada");
@@ -253,12 +254,12 @@ namespace sistemaAutonomoBCCIII
             }
             this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
             
-            if (this.criouAdversario)
+            if (!this.criouAdversario && this.partidaEmAndamento)
             {
                 this.getDadosDll.GerarTabuleiro();
                 this.getDadosDll.ListarMao();
 
-                this.criouAdversario = false;
+                this.criouAdversario = true;
 
                 string[] ids = this.tratamentos.stringsForArray(Jogo.ListarJogadores(this.idPartida));
                 string idJogador = this.idJogador.ToString();

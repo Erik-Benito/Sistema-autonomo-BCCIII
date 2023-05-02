@@ -31,13 +31,13 @@ namespace sistemaAutonomoBCCIII
             return Convert.ToInt32(resposta.Substring(0, resposta.Length + posicaoIdentificador - resposta.Length));
         }
 
-        public bool ehErro(string resposta)
+        public bool ehErro(string resposta, bool exibirErro = true)
         {
             string identificador = "ERRO";
 
             bool eherro = resposta.IndexOf(identificador) != -1 ? true : false;
 
-            if (eherro)
+            if (eherro  && exibirErro)
                 MessageBox.Show(resposta, "Error", MessageBoxButtons.OK);
 
             return eherro;

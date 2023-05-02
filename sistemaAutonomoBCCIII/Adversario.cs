@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static sistemaAutonomoBCCIII.Properties.ControlePirata;
 using static sistemaAutonomoBCCIII.GetDadosDll;
+using System.Runtime.InteropServices;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -96,8 +97,10 @@ namespace sistemaAutonomoBCCIII
 
                 posicaoItem posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1);
                 string[] partes = ultimoItem.Split(',');
-                
-                pirata pirataAtt = piratas.Find(p => p.posicao == Convert.ToInt32(partes[3]));
+
+                int posicaoAntiga = String.IsNullOrEmpty(partes[3]) ? 0 : Convert.ToInt32(partes[3]);
+
+                pirata pirataAtt = piratas.Find(p => p.posicao == posicaoAntiga);
                 pirataAtt.img.Location = posicaoXYpirata.posicaXY;
                 pirataAtt.posicao = novaPosicao;
 

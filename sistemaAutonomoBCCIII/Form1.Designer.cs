@@ -53,16 +53,30 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.btnJogar = new System.Windows.Forms.Button();
             this.lblTricornio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cartaTricornio = new System.Windows.Forms.PictureBox();
-            this.cartaFaca = new System.Windows.Forms.PictureBox();
-            this.cartaPistola = new System.Windows.Forms.PictureBox();
-            this.cartaChave = new System.Windows.Forms.PictureBox();
-            this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
-            this.cartaGarrafa = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.attPts = new System.Windows.Forms.Button();
+            this.btnVez = new System.Windows.Forms.Button();
+            this.ad4Img4 = new System.Windows.Forms.Panel();
+            this.ad3Img4 = new System.Windows.Forms.Panel();
+            this.ad4Img3 = new System.Windows.Forms.Panel();
+            this.ad4Img2 = new System.Windows.Forms.Panel();
+            this.ad1Img4 = new System.Windows.Forms.Panel();
+            this.ad4Img5 = new System.Windows.Forms.Panel();
+            this.ad3Img2 = new System.Windows.Forms.Panel();
+            this.ad4Img1 = new System.Windows.Forms.Panel();
+            this.ad3Img3 = new System.Windows.Forms.Panel();
+            this.ad4Img0 = new System.Windows.Forms.Panel();
+            this.ad2Img4 = new System.Windows.Forms.Panel();
+            this.ad3Img5 = new System.Windows.Forms.Panel();
+            this.ad1Img3 = new System.Windows.Forms.Panel();
+            this.ad3Img0 = new System.Windows.Forms.Panel();
+            this.ad1Img2 = new System.Windows.Forms.Panel();
+            this.ad3Img1 = new System.Windows.Forms.Panel();
+            this.ad2Img3 = new System.Windows.Forms.Panel();
+            this.ad1Img5 = new System.Windows.Forms.Panel();
             this.panelTabuleiro = new System.Windows.Forms.Panel();
             this.imgPirata0 = new System.Windows.Forms.Panel();
             this.imgPirata1 = new System.Windows.Forms.Panel();
@@ -70,40 +84,25 @@
             this.imgPirata5 = new System.Windows.Forms.Panel();
             this.imgPirata3 = new System.Windows.Forms.Panel();
             this.imgPirata4 = new System.Windows.Forms.Panel();
-            this.ad2Img4 = new System.Windows.Forms.Panel();
-            this.ad2Img3 = new System.Windows.Forms.Panel();
+            this.ad1Img1 = new System.Windows.Forms.Panel();
             this.ad2Img2 = new System.Windows.Forms.Panel();
+            this.ad1Img0 = new System.Windows.Forms.Panel();
             this.ad2Img5 = new System.Windows.Forms.Panel();
             this.ad2Img1 = new System.Windows.Forms.Panel();
             this.ad2Img0 = new System.Windows.Forms.Panel();
-            this.ad1Img4 = new System.Windows.Forms.Panel();
-            this.ad1Img3 = new System.Windows.Forms.Panel();
-            this.ad1Img2 = new System.Windows.Forms.Panel();
-            this.ad1Img5 = new System.Windows.Forms.Panel();
-            this.ad1Img1 = new System.Windows.Forms.Panel();
-            this.ad1Img0 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ad3Img4 = new System.Windows.Forms.Panel();
-            this.ad3Img2 = new System.Windows.Forms.Panel();
-            this.ad3Img3 = new System.Windows.Forms.Panel();
-            this.ad3Img5 = new System.Windows.Forms.Panel();
-            this.ad3Img0 = new System.Windows.Forms.Panel();
-            this.ad3Img1 = new System.Windows.Forms.Panel();
-            this.ad4Img4 = new System.Windows.Forms.Panel();
-            this.ad4Img3 = new System.Windows.Forms.Panel();
-            this.ad4Img2 = new System.Windows.Forms.Panel();
-            this.ad4Img5 = new System.Windows.Forms.Panel();
-            this.ad4Img1 = new System.Windows.Forms.Panel();
-            this.ad4Img0 = new System.Windows.Forms.Panel();
-            this.attPts = new System.Windows.Forms.Button();
-            this.btnVez = new System.Windows.Forms.Button();
+            this.cartaTricornio = new System.Windows.Forms.PictureBox();
+            this.cartaFaca = new System.Windows.Forms.PictureBox();
+            this.cartaPistola = new System.Windows.Forms.PictureBox();
+            this.cartaChave = new System.Windows.Forms.PictureBox();
+            this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
+            this.cartaGarrafa = new System.Windows.Forms.PictureBox();
+            this.panelTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaChave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaEsqueleto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaGarrafa)).BeginInit();
-            this.panelTabuleiro.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCartagena
@@ -121,7 +120,7 @@
             this.listBoxPartidas.FormattingEnabled = true;
             this.listBoxPartidas.Location = new System.Drawing.Point(28, 94);
             this.listBoxPartidas.Name = "listBoxPartidas";
-            this.listBoxPartidas.Size = new System.Drawing.Size(159, 199);
+            this.listBoxPartidas.Size = new System.Drawing.Size(141, 199);
             this.listBoxPartidas.TabIndex = 1;
             this.listBoxPartidas.Click += new System.EventHandler(this.listBoxPartidas_Click);
             this.listBoxPartidas.SelectedIndexChanged += new System.EventHandler(this.listBoxPartidas_SelectedIndexChanged);
@@ -129,9 +128,9 @@
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnEntrar.Location = new System.Drawing.Point(202, 191);
+            this.btnEntrar.Location = new System.Drawing.Point(189, 226);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(194, 102);
+            this.btnEntrar.Size = new System.Drawing.Size(79, 67);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -139,18 +138,18 @@
             // 
             // txtPirata
             // 
-            this.txtPirata.Location = new System.Drawing.Point(202, 94);
+            this.txtPirata.Location = new System.Drawing.Point(179, 124);
             this.txtPirata.Multiline = true;
             this.txtPirata.Name = "txtPirata";
-            this.txtPirata.Size = new System.Drawing.Size(194, 29);
+            this.txtPirata.Size = new System.Drawing.Size(102, 29);
             this.txtPirata.TabIndex = 3;
             // 
             // txtSenhaPirata
             // 
-            this.txtSenhaPirata.Location = new System.Drawing.Point(202, 156);
+            this.txtSenhaPirata.Location = new System.Drawing.Point(179, 183);
             this.txtSenhaPirata.Multiline = true;
             this.txtSenhaPirata.Name = "txtSenhaPirata";
-            this.txtSenhaPirata.Size = new System.Drawing.Size(194, 29);
+            this.txtSenhaPirata.Size = new System.Drawing.Size(102, 29);
             this.txtSenhaPirata.TabIndex = 4;
             // 
             // label1
@@ -167,7 +166,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(198, 67);
+            this.label2.Location = new System.Drawing.Point(175, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 6;
@@ -177,7 +176,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(198, 129);
+            this.label3.Location = new System.Drawing.Point(175, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 24);
             this.label3.TabIndex = 7;
@@ -187,18 +186,18 @@
             // 
             this.splitterJogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitterJogo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitterJogo.Location = new System.Drawing.Point(589, 0);
+            this.splitterJogo.Location = new System.Drawing.Point(415, 0);
             this.splitterJogo.Name = "splitterJogo";
-            this.splitterJogo.Size = new System.Drawing.Size(570, 515);
+            this.splitterJogo.Size = new System.Drawing.Size(744, 515);
             this.splitterJogo.TabIndex = 8;
             this.splitterJogo.TabStop = false;
             // 
             // btnCriarPartida
             // 
             this.btnCriarPartida.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnCriarPartida.Location = new System.Drawing.Point(202, 364);
+            this.btnCriarPartida.Location = new System.Drawing.Point(38, 469);
             this.btnCriarPartida.Name = "btnCriarPartida";
-            this.btnCriarPartida.Size = new System.Drawing.Size(194, 115);
+            this.btnCriarPartida.Size = new System.Drawing.Size(84, 43);
             this.btnCriarPartida.TabIndex = 9;
             this.btnCriarPartida.Text = "Criar";
             this.btnCriarPartida.UseVisualStyleBackColor = true;
@@ -208,53 +207,58 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(24, 420);
+            this.label4.Location = new System.Drawing.Point(34, 407);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
             this.label4.TabIndex = 11;
             this.label4.Text = "Senha :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtSenhaPartida
             // 
-            this.txtSenhaPartida.Location = new System.Drawing.Point(28, 447);
+            this.txtSenhaPartida.Location = new System.Drawing.Point(38, 434);
             this.txtSenhaPartida.Multiline = true;
             this.txtSenhaPartida.Name = "txtSenhaPartida";
-            this.txtSenhaPartida.Size = new System.Drawing.Size(159, 29);
+            this.txtSenhaPartida.Size = new System.Drawing.Size(146, 29);
             this.txtSenhaPartida.TabIndex = 10;
+            this.txtSenhaPartida.TextChanged += new System.EventHandler(this.txtSenhaPartida_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(24, 361);
+            this.label5.Location = new System.Drawing.Point(34, 348);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "Nome :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtNomePartida
             // 
-            this.txtNomePartida.Location = new System.Drawing.Point(28, 388);
+            this.txtNomePartida.Location = new System.Drawing.Point(38, 375);
             this.txtNomePartida.Multiline = true;
             this.txtNomePartida.Name = "txtNomePartida";
-            this.txtNomePartida.Size = new System.Drawing.Size(159, 29);
+            this.txtNomePartida.Size = new System.Drawing.Size(146, 29);
             this.txtNomePartida.TabIndex = 12;
+            this.txtNomePartida.TextChanged += new System.EventHandler(this.txtNomePartida_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(21, 316);
+            this.label6.Location = new System.Drawing.Point(31, 304);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 39);
             this.label6.TabIndex = 14;
             this.label6.Text = "Novo jogo :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // lblGarrafa
             // 
             this.lblGarrafa.AutoEllipsis = true;
             this.lblGarrafa.AutoSize = true;
-            this.lblGarrafa.Location = new System.Drawing.Point(673, 382);
+            this.lblGarrafa.Location = new System.Drawing.Point(490, 65);
             this.lblGarrafa.Name = "lblGarrafa";
             this.lblGarrafa.Padding = new System.Windows.Forms.Padding(5);
             this.lblGarrafa.Size = new System.Drawing.Size(23, 23);
@@ -266,7 +270,7 @@
             // 
             this.lblCaveira.AutoEllipsis = true;
             this.lblCaveira.AutoSize = true;
-            this.lblCaveira.Location = new System.Drawing.Point(760, 382);
+            this.lblCaveira.Location = new System.Drawing.Point(577, 65);
             this.lblCaveira.Name = "lblCaveira";
             this.lblCaveira.Padding = new System.Windows.Forms.Padding(5);
             this.lblCaveira.Size = new System.Drawing.Size(23, 23);
@@ -278,7 +282,7 @@
             // 
             this.lblChave.AutoEllipsis = true;
             this.lblChave.AutoSize = true;
-            this.lblChave.Location = new System.Drawing.Point(850, 382);
+            this.lblChave.Location = new System.Drawing.Point(489, 190);
             this.lblChave.Name = "lblChave";
             this.lblChave.Padding = new System.Windows.Forms.Padding(5);
             this.lblChave.Size = new System.Drawing.Size(23, 23);
@@ -289,7 +293,7 @@
             // 
             this.lblPistola.AutoEllipsis = true;
             this.lblPistola.AutoSize = true;
-            this.lblPistola.Location = new System.Drawing.Point(940, 382);
+            this.lblPistola.Location = new System.Drawing.Point(577, 190);
             this.lblPistola.Name = "lblPistola";
             this.lblPistola.Padding = new System.Windows.Forms.Padding(5);
             this.lblPistola.Size = new System.Drawing.Size(23, 23);
@@ -300,7 +304,7 @@
             // 
             this.lblFaca.AutoEllipsis = true;
             this.lblFaca.AutoSize = true;
-            this.lblFaca.Location = new System.Drawing.Point(1029, 382);
+            this.lblFaca.Location = new System.Drawing.Point(491, 311);
             this.lblFaca.Name = "lblFaca";
             this.lblFaca.Padding = new System.Windows.Forms.Padding(5);
             this.lblFaca.Size = new System.Drawing.Size(23, 23);
@@ -310,16 +314,16 @@
             // listBoxPlayers
             // 
             this.listBoxPlayers.FormattingEnabled = true;
-            this.listBoxPlayers.Location = new System.Drawing.Point(414, 94);
+            this.listBoxPlayers.Location = new System.Drawing.Point(287, 94);
             this.listBoxPlayers.Name = "listBoxPlayers";
-            this.listBoxPlayers.Size = new System.Drawing.Size(144, 199);
+            this.listBoxPlayers.Size = new System.Drawing.Size(107, 199);
             this.listBoxPlayers.TabIndex = 26;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 17F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(409, 63);
+            this.label13.Location = new System.Drawing.Point(161, 63);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(149, 28);
             this.label13.TabIndex = 27;
@@ -338,31 +342,21 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnIniciar.Location = new System.Drawing.Point(415, 364);
+            this.btnIniciar.Location = new System.Drawing.Point(287, 304);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(143, 112);
+            this.btnIniciar.Size = new System.Drawing.Size(107, 67);
             this.btnIniciar.TabIndex = 29;
             this.btnIniciar.Text = "Inciar";
             this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(411, 331);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(15, 24);
-            this.label14.TabIndex = 30;
-            this.label14.Text = " ";
-            // 
             // btnJogar
             // 
             this.btnJogar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnJogar.Location = new System.Drawing.Point(797, 331);
+            this.btnJogar.Location = new System.Drawing.Point(431, 438);
             this.btnJogar.Name = "btnJogar";
-            this.btnJogar.Size = new System.Drawing.Size(330, 39);
+            this.btnJogar.Size = new System.Drawing.Size(160, 65);
             this.btnJogar.TabIndex = 31;
             this.btnJogar.Text = "Jogar";
             this.btnJogar.UseVisualStyleBackColor = true;
@@ -372,7 +366,7 @@
             // 
             this.lblTricornio.AutoEllipsis = true;
             this.lblTricornio.AutoSize = true;
-            this.lblTricornio.Location = new System.Drawing.Point(1118, 382);
+            this.lblTricornio.Location = new System.Drawing.Point(583, 314);
             this.lblTricornio.Name = "lblTricornio";
             this.lblTricornio.Padding = new System.Windows.Forms.Padding(5);
             this.lblTricornio.Size = new System.Drawing.Size(23, 23);
@@ -382,19 +376,397 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(607, 331);
+            this.label7.Location = new System.Drawing.Point(427, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(179, 39);
             this.label7.TabIndex = 34;
             this.label7.Text = "Suas cartas :";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // attPts
+            // 
+            this.attPts.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.attPts.Location = new System.Drawing.Point(2, 61);
+            this.attPts.Name = "attPts";
+            this.attPts.Size = new System.Drawing.Size(25, 33);
+            this.attPts.TabIndex = 53;
+            this.attPts.Text = "🌀";
+            this.attPts.UseVisualStyleBackColor = true;
+            this.attPts.Click += new System.EventHandler(this.attPts_Click);
+            // 
+            // btnVez
+            // 
+            this.btnVez.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
+            this.btnVez.Location = new System.Drawing.Point(1058, 438);
+            this.btnVez.Name = "btnVez";
+            this.btnVez.Size = new System.Drawing.Size(83, 70);
+            this.btnVez.TabIndex = 54;
+            this.btnVez.Text = "🫵";
+            this.btnVez.UseVisualStyleBackColor = true;
+            // 
+            // ad4Img4
+            // 
+            this.ad4Img4.AccessibleDescription = "0";
+            this.ad4Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ad4Img4.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img4.Location = new System.Drawing.Point(1011, 445);
+            this.ad4Img4.Name = "ad4Img4";
+            this.ad4Img4.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img4.TabIndex = 48;
+            // 
+            // ad3Img4
+            // 
+            this.ad3Img4.AccessibleDescription = "0";
+            this.ad3Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ad3Img4.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img4.Location = new System.Drawing.Point(904, 445);
+            this.ad3Img4.Name = "ad3Img4";
+            this.ad3Img4.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img4.TabIndex = 48;
+            // 
+            // ad4Img3
+            // 
+            this.ad4Img3.AccessibleDescription = "0";
+            this.ad4Img3.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img3.Location = new System.Drawing.Point(980, 477);
+            this.ad4Img3.Name = "ad4Img3";
+            this.ad4Img3.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img3.TabIndex = 49;
+            // 
+            // ad4Img2
+            // 
+            this.ad4Img2.AccessibleDescription = "0";
+            this.ad4Img2.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img2.Location = new System.Drawing.Point(980, 445);
+            this.ad4Img2.Name = "ad4Img2";
+            this.ad4Img2.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img2.TabIndex = 50;
+            // 
+            // ad1Img4
+            // 
+            this.ad1Img4.AccessibleDescription = "0";
+            this.ad1Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ad1Img4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img4.Location = new System.Drawing.Point(690, 445);
+            this.ad1Img4.Name = "ad1Img4";
+            this.ad1Img4.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img4.TabIndex = 48;
+            // 
+            // ad4Img5
+            // 
+            this.ad4Img5.AccessibleDescription = "0";
+            this.ad4Img5.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img5.Location = new System.Drawing.Point(1011, 477);
+            this.ad4Img5.Name = "ad4Img5";
+            this.ad4Img5.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img5.TabIndex = 51;
+            // 
+            // ad3Img2
+            // 
+            this.ad3Img2.AccessibleDescription = "0";
+            this.ad3Img2.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img2.Location = new System.Drawing.Point(873, 477);
+            this.ad3Img2.Name = "ad3Img2";
+            this.ad3Img2.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img2.TabIndex = 49;
+            // 
+            // ad4Img1
+            // 
+            this.ad4Img1.AccessibleDescription = "0";
+            this.ad4Img1.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img1.Location = new System.Drawing.Point(949, 477);
+            this.ad4Img1.Name = "ad4Img1";
+            this.ad4Img1.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img1.TabIndex = 52;
+            // 
+            // ad3Img3
+            // 
+            this.ad3Img3.AccessibleDescription = "0";
+            this.ad3Img3.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img3.Location = new System.Drawing.Point(873, 445);
+            this.ad3Img3.Name = "ad3Img3";
+            this.ad3Img3.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img3.TabIndex = 50;
+            // 
+            // ad4Img0
+            // 
+            this.ad4Img0.AccessibleDescription = "0";
+            this.ad4Img0.BackColor = System.Drawing.Color.Aqua;
+            this.ad4Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad4Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad4Img0.Location = new System.Drawing.Point(949, 445);
+            this.ad4Img0.Name = "ad4Img0";
+            this.ad4Img0.Size = new System.Drawing.Size(20, 20);
+            this.ad4Img0.TabIndex = 47;
+            // 
+            // ad2Img4
+            // 
+            this.ad2Img4.AccessibleDescription = "0";
+            this.ad2Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ad2Img4.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img4.Location = new System.Drawing.Point(797, 445);
+            this.ad2Img4.Name = "ad2Img4";
+            this.ad2Img4.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img4.TabIndex = 42;
+            // 
+            // ad3Img5
+            // 
+            this.ad3Img5.AccessibleDescription = "0";
+            this.ad3Img5.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img5.Location = new System.Drawing.Point(904, 477);
+            this.ad3Img5.Name = "ad3Img5";
+            this.ad3Img5.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img5.TabIndex = 51;
+            // 
+            // ad1Img3
+            // 
+            this.ad1Img3.AccessibleDescription = "0";
+            this.ad1Img3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img3.Location = new System.Drawing.Point(659, 477);
+            this.ad1Img3.Name = "ad1Img3";
+            this.ad1Img3.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img3.TabIndex = 49;
+            // 
+            // ad3Img0
+            // 
+            this.ad3Img0.AccessibleDescription = "0";
+            this.ad3Img0.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img0.Location = new System.Drawing.Point(842, 477);
+            this.ad3Img0.Name = "ad3Img0";
+            this.ad3Img0.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img0.TabIndex = 52;
+            // 
+            // ad1Img2
+            // 
+            this.ad1Img2.AccessibleDescription = "0";
+            this.ad1Img2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img2.Location = new System.Drawing.Point(659, 445);
+            this.ad1Img2.Name = "ad1Img2";
+            this.ad1Img2.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img2.TabIndex = 50;
+            // 
+            // ad3Img1
+            // 
+            this.ad3Img1.AccessibleDescription = "0";
+            this.ad3Img1.BackColor = System.Drawing.Color.Yellow;
+            this.ad3Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad3Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad3Img1.Location = new System.Drawing.Point(842, 445);
+            this.ad3Img1.Name = "ad3Img1";
+            this.ad3Img1.Size = new System.Drawing.Size(20, 20);
+            this.ad3Img1.TabIndex = 47;
+            // 
+            // ad2Img3
+            // 
+            this.ad2Img3.AccessibleDescription = "0";
+            this.ad2Img3.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img3.Location = new System.Drawing.Point(766, 477);
+            this.ad2Img3.Name = "ad2Img3";
+            this.ad2Img3.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img3.TabIndex = 43;
+            // 
+            // ad1Img5
+            // 
+            this.ad1Img5.AccessibleDescription = "0";
+            this.ad1Img5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img5.Location = new System.Drawing.Point(690, 477);
+            this.ad1Img5.Name = "ad1Img5";
+            this.ad1Img5.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img5.TabIndex = 51;
+            // 
+            // panelTabuleiro
+            // 
+            this.panelTabuleiro.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.ImgTabuleiro;
+            this.panelTabuleiro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTabuleiro.Controls.Add(this.imgPirata0);
+            this.panelTabuleiro.Controls.Add(this.imgPirata1);
+            this.panelTabuleiro.Controls.Add(this.imgPirata2);
+            this.panelTabuleiro.Controls.Add(this.imgPirata5);
+            this.panelTabuleiro.Controls.Add(this.imgPirata3);
+            this.panelTabuleiro.Controls.Add(this.imgPirata4);
+            this.panelTabuleiro.Location = new System.Drawing.Point(628, 18);
+            this.panelTabuleiro.Name = "panelTabuleiro";
+            this.panelTabuleiro.Size = new System.Drawing.Size(513, 411);
+            this.panelTabuleiro.TabIndex = 38;
+            // 
+            // imgPirata0
+            // 
+            this.imgPirata0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata0.Location = new System.Drawing.Point(3, 3);
+            this.imgPirata0.Name = "imgPirata0";
+            this.imgPirata0.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata0.TabIndex = 39;
+            this.imgPirata0.Click += new System.EventHandler(this.imgPirata0_Click);
+            this.imgPirata0.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata0_Paint);
+            // 
+            // imgPirata1
+            // 
+            this.imgPirata1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata1.Location = new System.Drawing.Point(3, 35);
+            this.imgPirata1.Name = "imgPirata1";
+            this.imgPirata1.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata1.TabIndex = 40;
+            this.imgPirata1.Click += new System.EventHandler(this.imgPirata1_Click);
+            this.imgPirata1.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata1_Paint);
+            // 
+            // imgPirata2
+            // 
+            this.imgPirata2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata2.Location = new System.Drawing.Point(3, 67);
+            this.imgPirata2.Name = "imgPirata2";
+            this.imgPirata2.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata2.TabIndex = 40;
+            this.imgPirata2.Click += new System.EventHandler(this.imgPirata2_Click);
+            this.imgPirata2.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata2_Paint);
+            // 
+            // imgPirata5
+            // 
+            this.imgPirata5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.imgPirata5.BackColor = System.Drawing.Color.White;
+            this.imgPirata5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata5.Location = new System.Drawing.Point(36, 67);
+            this.imgPirata5.Name = "imgPirata5";
+            this.imgPirata5.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata5.TabIndex = 40;
+            this.imgPirata5.Click += new System.EventHandler(this.imgPirata5_Click);
+            this.imgPirata5.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata5_Paint);
+            // 
+            // imgPirata3
+            // 
+            this.imgPirata3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata3.Location = new System.Drawing.Point(34, 3);
+            this.imgPirata3.Name = "imgPirata3";
+            this.imgPirata3.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata3.TabIndex = 40;
+            this.imgPirata3.Click += new System.EventHandler(this.imgPirata3_Click);
+            this.imgPirata3.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata3_Paint);
+            // 
+            // imgPirata4
+            // 
+            this.imgPirata4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.imgPirata4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPirata4.Location = new System.Drawing.Point(34, 35);
+            this.imgPirata4.Name = "imgPirata4";
+            this.imgPirata4.Size = new System.Drawing.Size(20, 20);
+            this.imgPirata4.TabIndex = 40;
+            this.imgPirata4.Click += new System.EventHandler(this.imgPirata4_Click);
+            this.imgPirata4.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata4_Paint);
+            // 
+            // ad1Img1
+            // 
+            this.ad1Img1.AccessibleDescription = "0";
+            this.ad1Img1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img1.Location = new System.Drawing.Point(628, 477);
+            this.ad1Img1.Name = "ad1Img1";
+            this.ad1Img1.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img1.TabIndex = 52;
+            // 
+            // ad2Img2
+            // 
+            this.ad2Img2.AccessibleDescription = "0";
+            this.ad2Img2.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img2.Location = new System.Drawing.Point(766, 445);
+            this.ad2Img2.Name = "ad2Img2";
+            this.ad2Img2.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img2.TabIndex = 44;
+            // 
+            // ad1Img0
+            // 
+            this.ad1Img0.AccessibleDescription = "0";
+            this.ad1Img0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ad1Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad1Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad1Img0.Location = new System.Drawing.Point(628, 445);
+            this.ad1Img0.Name = "ad1Img0";
+            this.ad1Img0.Size = new System.Drawing.Size(20, 20);
+            this.ad1Img0.TabIndex = 47;
+            // 
+            // ad2Img5
+            // 
+            this.ad2Img5.AccessibleDescription = "0";
+            this.ad2Img5.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img5.Location = new System.Drawing.Point(797, 477);
+            this.ad2Img5.Name = "ad2Img5";
+            this.ad2Img5.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img5.TabIndex = 45;
+            // 
+            // ad2Img1
+            // 
+            this.ad2Img1.AccessibleDescription = "0";
+            this.ad2Img1.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img1.Location = new System.Drawing.Point(735, 477);
+            this.ad2Img1.Name = "ad2Img1";
+            this.ad2Img1.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img1.TabIndex = 46;
+            // 
+            // ad2Img0
+            // 
+            this.ad2Img0.AccessibleDescription = "0";
+            this.ad2Img0.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.ad2Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Pirata2;
+            this.ad2Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ad2Img0.Location = new System.Drawing.Point(735, 445);
+            this.ad2Img0.Name = "ad2Img0";
+            this.ad2Img0.Size = new System.Drawing.Size(20, 20);
+            this.ad2Img0.TabIndex = 41;
             // 
             // cartaTricornio
             // 
             this.cartaTricornio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cartaTricornio.ErrorImage = global::sistemaAutonomoBCCIII.Properties.Resources.cg_cardl__1_;
             this.cartaTricornio.Image = global::sistemaAutonomoBCCIII.Properties.Resources.cg_cardl__1_;
-            this.cartaTricornio.Location = new System.Drawing.Point(1055, 388);
+            this.cartaTricornio.Location = new System.Drawing.Point(520, 320);
             this.cartaTricornio.Name = "cartaTricornio";
             this.cartaTricornio.Size = new System.Drawing.Size(72, 112);
             this.cartaTricornio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -405,7 +777,7 @@
             // cartaFaca
             // 
             this.cartaFaca.Image = global::sistemaAutonomoBCCIII.Properties.Resources.faca;
-            this.cartaFaca.Location = new System.Drawing.Point(969, 388);
+            this.cartaFaca.Location = new System.Drawing.Point(431, 317);
             this.cartaFaca.Name = "cartaFaca";
             this.cartaFaca.Size = new System.Drawing.Size(72, 112);
             this.cartaFaca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -416,7 +788,7 @@
             // cartaPistola
             // 
             this.cartaPistola.Image = global::sistemaAutonomoBCCIII.Properties.Resources.pistola;
-            this.cartaPistola.Location = new System.Drawing.Point(882, 388);
+            this.cartaPistola.Location = new System.Drawing.Point(519, 196);
             this.cartaPistola.Name = "cartaPistola";
             this.cartaPistola.Size = new System.Drawing.Size(72, 112);
             this.cartaPistola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -427,7 +799,7 @@
             // cartaChave
             // 
             this.cartaChave.Image = global::sistemaAutonomoBCCIII.Properties.Resources.chave;
-            this.cartaChave.Location = new System.Drawing.Point(792, 388);
+            this.cartaChave.Location = new System.Drawing.Point(431, 196);
             this.cartaChave.Name = "cartaChave";
             this.cartaChave.Size = new System.Drawing.Size(72, 112);
             this.cartaChave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -438,7 +810,7 @@
             // cartaEsqueleto
             // 
             this.cartaEsqueleto.Image = global::sistemaAutonomoBCCIII.Properties.Resources.caverira;
-            this.cartaEsqueleto.Location = new System.Drawing.Point(702, 388);
+            this.cartaEsqueleto.Location = new System.Drawing.Point(519, 71);
             this.cartaEsqueleto.Name = "cartaEsqueleto";
             this.cartaEsqueleto.Size = new System.Drawing.Size(72, 112);
             this.cartaEsqueleto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -449,390 +821,13 @@
             // cartaGarrafa
             // 
             this.cartaGarrafa.Image = global::sistemaAutonomoBCCIII.Properties.Resources.garrafa;
-            this.cartaGarrafa.Location = new System.Drawing.Point(614, 388);
+            this.cartaGarrafa.Location = new System.Drawing.Point(431, 71);
             this.cartaGarrafa.Name = "cartaGarrafa";
             this.cartaGarrafa.Size = new System.Drawing.Size(72, 112);
             this.cartaGarrafa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cartaGarrafa.TabIndex = 16;
             this.cartaGarrafa.TabStop = false;
             this.cartaGarrafa.Click += new System.EventHandler(this.cartaGarrafa_Click);
-            // 
-            // panelTabuleiro
-            // 
-            this.panelTabuleiro.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources.Tabuleiro1;
-            this.panelTabuleiro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTabuleiro.Controls.Add(this.imgPirata0);
-            this.panelTabuleiro.Controls.Add(this.imgPirata1);
-            this.panelTabuleiro.Controls.Add(this.imgPirata2);
-            this.panelTabuleiro.Controls.Add(this.imgPirata5);
-            this.panelTabuleiro.Controls.Add(this.imgPirata3);
-            this.panelTabuleiro.Controls.Add(this.imgPirata4);
-            this.panelTabuleiro.Location = new System.Drawing.Point(625, 18);
-            this.panelTabuleiro.Name = "panelTabuleiro";
-            this.panelTabuleiro.Size = new System.Drawing.Size(427, 231);
-            this.panelTabuleiro.TabIndex = 38;
-            // 
-            // imgPirata0
-            // 
-            this.imgPirata0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata0.Location = new System.Drawing.Point(3, 3);
-            this.imgPirata0.Name = "imgPirata0";
-            this.imgPirata0.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata0.TabIndex = 39;
-            this.imgPirata0.Click += new System.EventHandler(this.imgPirata0_Click);
-            this.imgPirata0.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata0_Paint);
-            // 
-            // imgPirata1
-            // 
-            this.imgPirata1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata1.Location = new System.Drawing.Point(3, 35);
-            this.imgPirata1.Name = "imgPirata1";
-            this.imgPirata1.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata1.TabIndex = 40;
-            this.imgPirata1.Click += new System.EventHandler(this.imgPirata1_Click);
-            this.imgPirata1.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata1_Paint);
-            // 
-            // imgPirata2
-            // 
-            this.imgPirata2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata2.Location = new System.Drawing.Point(3, 67);
-            this.imgPirata2.Name = "imgPirata2";
-            this.imgPirata2.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata2.TabIndex = 40;
-            this.imgPirata2.Click += new System.EventHandler(this.imgPirata2_Click);
-            this.imgPirata2.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata2_Paint);
-            // 
-            // imgPirata5
-            // 
-            this.imgPirata5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.imgPirata5.BackColor = System.Drawing.Color.White;
-            this.imgPirata5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata5.Location = new System.Drawing.Point(36, 67);
-            this.imgPirata5.Name = "imgPirata5";
-            this.imgPirata5.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata5.TabIndex = 40;
-            this.imgPirata5.Click += new System.EventHandler(this.imgPirata5_Click);
-            this.imgPirata5.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata5_Paint);
-            // 
-            // imgPirata3
-            // 
-            this.imgPirata3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata3.Location = new System.Drawing.Point(34, 3);
-            this.imgPirata3.Name = "imgPirata3";
-            this.imgPirata3.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata3.TabIndex = 40;
-            this.imgPirata3.Click += new System.EventHandler(this.imgPirata3_Click);
-            this.imgPirata3.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata3_Paint);
-            // 
-            // imgPirata4
-            // 
-            this.imgPirata4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.imgPirata4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPirata4.Location = new System.Drawing.Point(34, 35);
-            this.imgPirata4.Name = "imgPirata4";
-            this.imgPirata4.Size = new System.Drawing.Size(25, 26);
-            this.imgPirata4.TabIndex = 40;
-            this.imgPirata4.Click += new System.EventHandler(this.imgPirata4_Click);
-            this.imgPirata4.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPirata4_Paint);
-            // 
-            // ad2Img4
-            // 
-            this.ad2Img4.AccessibleDescription = "0";
-            this.ad2Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ad2Img4.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img4.Location = new System.Drawing.Point(789, 255);
-            this.ad2Img4.Name = "ad2Img4";
-            this.ad2Img4.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img4.TabIndex = 42;
-            // 
-            // ad2Img3
-            // 
-            this.ad2Img3.AccessibleDescription = "0";
-            this.ad2Img3.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img3.Location = new System.Drawing.Point(758, 287);
-            this.ad2Img3.Name = "ad2Img3";
-            this.ad2Img3.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img3.TabIndex = 43;
-            // 
-            // ad2Img2
-            // 
-            this.ad2Img2.AccessibleDescription = "0";
-            this.ad2Img2.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img2.Location = new System.Drawing.Point(758, 255);
-            this.ad2Img2.Name = "ad2Img2";
-            this.ad2Img2.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img2.TabIndex = 44;
-            // 
-            // ad2Img5
-            // 
-            this.ad2Img5.AccessibleDescription = "0";
-            this.ad2Img5.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img5.Location = new System.Drawing.Point(789, 287);
-            this.ad2Img5.Name = "ad2Img5";
-            this.ad2Img5.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img5.TabIndex = 45;
-            // 
-            // ad2Img1
-            // 
-            this.ad2Img1.AccessibleDescription = "0";
-            this.ad2Img1.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img1.Location = new System.Drawing.Point(727, 287);
-            this.ad2Img1.Name = "ad2Img1";
-            this.ad2Img1.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img1.TabIndex = 46;
-            // 
-            // ad2Img0
-            // 
-            this.ad2Img0.AccessibleDescription = "0";
-            this.ad2Img0.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.ad2Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad2Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad2Img0.Location = new System.Drawing.Point(727, 255);
-            this.ad2Img0.Name = "ad2Img0";
-            this.ad2Img0.Size = new System.Drawing.Size(25, 26);
-            this.ad2Img0.TabIndex = 41;
-            // 
-            // ad1Img4
-            // 
-            this.ad1Img4.AccessibleDescription = "0";
-            this.ad1Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ad1Img4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img4.Location = new System.Drawing.Point(690, 255);
-            this.ad1Img4.Name = "ad1Img4";
-            this.ad1Img4.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img4.TabIndex = 48;
-            // 
-            // ad1Img3
-            // 
-            this.ad1Img3.AccessibleDescription = "0";
-            this.ad1Img3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img3.Location = new System.Drawing.Point(659, 287);
-            this.ad1Img3.Name = "ad1Img3";
-            this.ad1Img3.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img3.TabIndex = 49;
-            // 
-            // ad1Img2
-            // 
-            this.ad1Img2.AccessibleDescription = "0";
-            this.ad1Img2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img2.Location = new System.Drawing.Point(659, 255);
-            this.ad1Img2.Name = "ad1Img2";
-            this.ad1Img2.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img2.TabIndex = 50;
-            // 
-            // ad1Img5
-            // 
-            this.ad1Img5.AccessibleDescription = "0";
-            this.ad1Img5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img5.Location = new System.Drawing.Point(690, 287);
-            this.ad1Img5.Name = "ad1Img5";
-            this.ad1Img5.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img5.TabIndex = 51;
-            // 
-            // ad1Img1
-            // 
-            this.ad1Img1.AccessibleDescription = "0";
-            this.ad1Img1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img1.Location = new System.Drawing.Point(628, 287);
-            this.ad1Img1.Name = "ad1Img1";
-            this.ad1Img1.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img1.TabIndex = 52;
-            // 
-            // ad1Img0
-            // 
-            this.ad1Img0.AccessibleDescription = "0";
-            this.ad1Img0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ad1Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad1Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad1Img0.Location = new System.Drawing.Point(628, 255);
-            this.ad1Img0.Name = "ad1Img0";
-            this.ad1Img0.Size = new System.Drawing.Size(25, 26);
-            this.ad1Img0.TabIndex = 47;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ad3Img4
-            // 
-            this.ad3Img4.AccessibleDescription = "0";
-            this.ad3Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ad3Img4.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img4.Location = new System.Drawing.Point(927, 255);
-            this.ad3Img4.Name = "ad3Img4";
-            this.ad3Img4.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img4.TabIndex = 48;
-            // 
-            // ad3Img2
-            // 
-            this.ad3Img2.AccessibleDescription = "0";
-            this.ad3Img2.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img2.Location = new System.Drawing.Point(896, 287);
-            this.ad3Img2.Name = "ad3Img2";
-            this.ad3Img2.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img2.TabIndex = 49;
-            // 
-            // ad3Img3
-            // 
-            this.ad3Img3.AccessibleDescription = "0";
-            this.ad3Img3.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img3.Location = new System.Drawing.Point(896, 255);
-            this.ad3Img3.Name = "ad3Img3";
-            this.ad3Img3.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img3.TabIndex = 50;
-            // 
-            // ad3Img5
-            // 
-            this.ad3Img5.AccessibleDescription = "0";
-            this.ad3Img5.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img5.Location = new System.Drawing.Point(927, 287);
-            this.ad3Img5.Name = "ad3Img5";
-            this.ad3Img5.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img5.TabIndex = 51;
-            // 
-            // ad3Img0
-            // 
-            this.ad3Img0.AccessibleDescription = "0";
-            this.ad3Img0.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img0.Location = new System.Drawing.Point(865, 287);
-            this.ad3Img0.Name = "ad3Img0";
-            this.ad3Img0.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img0.TabIndex = 52;
-            // 
-            // ad3Img1
-            // 
-            this.ad3Img1.AccessibleDescription = "0";
-            this.ad3Img1.BackColor = System.Drawing.Color.Yellow;
-            this.ad3Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad3Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad3Img1.Location = new System.Drawing.Point(865, 255);
-            this.ad3Img1.Name = "ad3Img1";
-            this.ad3Img1.Size = new System.Drawing.Size(25, 26);
-            this.ad3Img1.TabIndex = 47;
-            // 
-            // ad4Img4
-            // 
-            this.ad4Img4.AccessibleDescription = "0";
-            this.ad4Img4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ad4Img4.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img4.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img4.Location = new System.Drawing.Point(1025, 255);
-            this.ad4Img4.Name = "ad4Img4";
-            this.ad4Img4.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img4.TabIndex = 48;
-            // 
-            // ad4Img3
-            // 
-            this.ad4Img3.AccessibleDescription = "0";
-            this.ad4Img3.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img3.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img3.Location = new System.Drawing.Point(994, 287);
-            this.ad4Img3.Name = "ad4Img3";
-            this.ad4Img3.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img3.TabIndex = 49;
-            // 
-            // ad4Img2
-            // 
-            this.ad4Img2.AccessibleDescription = "0";
-            this.ad4Img2.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img2.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img2.Location = new System.Drawing.Point(994, 255);
-            this.ad4Img2.Name = "ad4Img2";
-            this.ad4Img2.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img2.TabIndex = 50;
-            // 
-            // ad4Img5
-            // 
-            this.ad4Img5.AccessibleDescription = "0";
-            this.ad4Img5.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img5.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img5.Location = new System.Drawing.Point(1025, 287);
-            this.ad4Img5.Name = "ad4Img5";
-            this.ad4Img5.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img5.TabIndex = 51;
-            // 
-            // ad4Img1
-            // 
-            this.ad4Img1.AccessibleDescription = "0";
-            this.ad4Img1.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img1.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img1.Location = new System.Drawing.Point(963, 287);
-            this.ad4Img1.Name = "ad4Img1";
-            this.ad4Img1.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img1.TabIndex = 52;
-            // 
-            // ad4Img0
-            // 
-            this.ad4Img0.AccessibleDescription = "0";
-            this.ad4Img0.BackColor = System.Drawing.Color.Aqua;
-            this.ad4Img0.BackgroundImage = global::sistemaAutonomoBCCIII.Properties.Resources._1f535;
-            this.ad4Img0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ad4Img0.Location = new System.Drawing.Point(963, 255);
-            this.ad4Img0.Name = "ad4Img0";
-            this.ad4Img0.Size = new System.Drawing.Size(25, 26);
-            this.ad4Img0.TabIndex = 47;
-            // 
-            // attPts
-            // 
-            this.attPts.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.attPts.Location = new System.Drawing.Point(147, 56);
-            this.attPts.Name = "attPts";
-            this.attPts.Size = new System.Drawing.Size(40, 35);
-            this.attPts.TabIndex = 53;
-            this.attPts.Text = "🌀";
-            this.attPts.UseVisualStyleBackColor = true;
-            this.attPts.Click += new System.EventHandler(this.attPts_Click);
-            // 
-            // btnVez
-            // 
-            this.btnVez.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnVez.Location = new System.Drawing.Point(1058, 21);
-            this.btnVez.Name = "btnVez";
-            this.btnVez.Size = new System.Drawing.Size(83, 70);
-            this.btnVez.TabIndex = 54;
-            this.btnVez.Text = "🫵";
-            this.btnVez.UseVisualStyleBackColor = true;
             // 
             // ContainerInicial
             // 
@@ -871,7 +866,6 @@
             this.Controls.Add(this.lblTricornio);
             this.Controls.Add(this.cartaTricornio);
             this.Controls.Add(this.btnJogar);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.label13);
@@ -903,13 +897,13 @@
             this.Name = "ContainerInicial";
             this.Text = " Villavicencio";
             this.Load += new System.EventHandler(this.ContainerInicial_Load);
+            this.panelTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaPistola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaChave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaEsqueleto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaGarrafa)).EndInit();
-            this.panelTabuleiro.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -941,7 +935,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label label14;
         public System.Windows.Forms.Label lblGarrafa;
         public System.Windows.Forms.Label lblCaveira;
         public System.Windows.Forms.Label lblChave;

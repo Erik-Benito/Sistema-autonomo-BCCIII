@@ -121,14 +121,14 @@
   <data name="imgChapeu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgChapeu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 3barco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 3barco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgPistola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgPistola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cg_cardl (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cg_cardl (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="garrafa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\garrafa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgTabuleiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgTabuleiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgChave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgChave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +136,14 @@
   <data name="pistola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pistola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgPistola" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgPistola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 3barco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 3barco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1f535" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1f535.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="faca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\faca.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +160,13 @@
   <data name="imgGarrafa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgGarrafa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garrafa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garrafa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tabuleiro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tabuleiro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pirata" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pirata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1f535" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1f535.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pirata2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pirata2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

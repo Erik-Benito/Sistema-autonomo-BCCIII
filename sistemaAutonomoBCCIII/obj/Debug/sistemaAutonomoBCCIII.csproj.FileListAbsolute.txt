@@ -54,3 +54,17 @@ C:\Users\gabriel.kmnegrao\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBC
 C:\Users\gabriel.kmnegrao\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete
 C:\Users\gabriel.kmnegrao\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.exe
 C:\Users\gabriel.kmnegrao\Source\Repos\Sistema-autonomo-BCCIII\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.pdb
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe.config
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.exe
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\bin\Debug\sistemaAutonomoBCCIII.pdb
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.dll
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\bin\Debug\CartagenaServer.xml
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.AssemblyReference.cache
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.SuggestedBindingRedirects.cache
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.ContainerInicial.resources
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.Properties.Resources.resources
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.GenerateResource.cache
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CoreCompileInputs.cache
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.csproj.CopyComplete
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.exe
+C:\Users\artic\source\repos\Sistema-autonomo-BCCIII(2)\sistemaAutonomoBCCIII\obj\Debug\sistemaAutonomoBCCIII.pdb

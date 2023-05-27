@@ -13,8 +13,31 @@ namespace sistemaAutonomoBCCIII.Properties
         // @ para indicar para que o não há um carta selecionado, desculpe mas esse é o padrão do codigo do professor.
         public string cartaSelecionada = "@";
 
+        public int qtdTricornio;
+        public int qtdCaveira;
+        public int qtdGarrafa;
+        public int qtdFaca;
+        public int qtdPistola;
+        public int qtdChave;
         public ControleCarta(ContainerInicial containerInicial)
         { this.containerInicial = containerInicial; }
+
+        private int qtdDeCarta()
+        {
+            int qntcartas = qtdTricornio + qtdCaveira + qtdGarrafa + qtdFaca + qtdPistola + qtdChave;
+
+            return qntcartas;
+        }
+
+        private void qtdPorCarta(int tricornio, int caveira, int garrafa, int faca, int pistola, int chave)
+        {
+            this.qtdTricornio = tricornio;
+            this.qtdCaveira = caveira;
+            this.qtdGarrafa = garrafa;
+            this.qtdFaca = faca;
+            this.qtdPistola = pistola;
+            this.qtdChave = chave;
+        }
 
         private void limparCorCartas()
         {
@@ -37,12 +60,15 @@ namespace sistemaAutonomoBCCIII.Properties
 
         public void setCartas(string cartas)
         {
-            this.containerInicial.lblCaveira.Text = this.qtdCartas(cartas, "E").ToString();
-            this.containerInicial.lblFaca.Text = this.qtdCartas(cartas, "F").ToString();
-            this.containerInicial.lblGarrafa.Text = this.qtdCartas(cartas, "G").ToString();
-            this.containerInicial.lblPistola.Text = this.qtdCartas(cartas, "P").ToString();
-            this.containerInicial.lblChave.Text = this.qtdCartas(cartas, "C").ToString();
-            this.containerInicial.lblTricornio.Text = this.qtdCartas(cartas, "T").ToString();
+            qtdPorCarta(this.qtdCartas(cartas, "T"), this.qtdCartas(cartas, "C"), this.qtdCartas(cartas, "G"), this.qtdCartas(cartas, "F"), this.qtdCartas(cartas, "P"), this.qtdCartas(cartas, "C"));
+
+            this.containerInicial.lblCaveira.Text = qtdCaveira.ToString();
+            this.containerInicial.lblFaca.Text = qtdFaca.ToString();
+            this.containerInicial.lblGarrafa.Text = qtdGarrafa.ToString();
+            this.containerInicial.lblPistola.Text = qtdPistola.ToString();
+            this.containerInicial.lblChave.Text = qtdChave.ToString();
+            this.containerInicial.lblTricornio.Text = qtdTricornio.ToString();
+
         }
 
         public void selecionarCarta(string cartaSelecionada)

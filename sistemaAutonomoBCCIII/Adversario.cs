@@ -19,7 +19,7 @@ namespace sistemaAutonomoBCCIII
         public Tratamentos tratamentos = new Tratamentos();
 
         public int id;
-        private List<pirata> piratas;
+        public List<pirata> piratas;
         public string ultimaAtt = "";
 
 

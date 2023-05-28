@@ -22,7 +22,7 @@ namespace sistemaAutonomoBCCIII.Properties
         public ControleCarta(ContainerInicial containerInicial)
         { this.containerInicial = containerInicial; }
 
-        private int qtdDeCarta()
+        public int qtdDeCarta()
         {
             int qntcartas = qtdTricornio + qtdCaveira + qtdGarrafa + qtdFaca + qtdPistola + qtdChave;
 

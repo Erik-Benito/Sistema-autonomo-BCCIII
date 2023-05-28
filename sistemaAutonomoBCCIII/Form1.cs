@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.ComponentModel.Design;
+using static sistemaAutonomoBCCIII.Properties.ControlePirata;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -291,6 +292,7 @@ namespace sistemaAutonomoBCCIII
                     }
                 }
 
+                botJogar();
             }
 
             string resposta;
@@ -316,6 +318,90 @@ namespace sistemaAutonomoBCCIII
 
         }
 
+
+
+        private void botJogar()
+        {
+
+            pirata ultimaPosica = new pirata();
+            pirata primeiraPosica = new pirata();
+
+            this.controlePirata.piratas.ForEach(pirata =>
+            {
+                if (ultimaPosica.posicao > pirata.posicao)
+                    ultimaPosica = pirata;
+
+                if (primeiraPosica.posicao < pirata.posicao)
+                    primeiraPosica = pirata;
+            });
+
+            if (this.controleCarta.qtdDeCarta() <= 3)
+            {
+                this.controlePirata.SelecionarPirata(ultimaPosica.id);
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+                return;
+            }
+
+            this.controlePirata.SelecionarPirata(primeiraPosica.id);
+
+            if(this.controleCarta.qtdGarrafa > 1)
+            {
+                this.controleCarta.selecionarCarta("G");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+            if (this.controleCarta.qtdCaveira > 1)
+            {
+                this.controleCarta.selecionarCarta("E");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+            if (this.controleCarta.qtdFaca > 1)
+            {
+                this.controleCarta.selecionarCarta("F");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+            if (this.controleCarta.qtdTricornio> 1)
+            {
+                this.controleCarta.selecionarCarta("T");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+            if (this.controleCarta.qtdPistola > 1)
+            {
+                this.controleCarta.selecionarCarta("P");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+            if (this.controleCarta.qtdChave > 1)
+            {
+                this.controleCarta.selecionarCarta("C");
+                this.btnJogar_Click(this, EventArgs.Empty);
+
+
+                return;
+            }
+
+
+
+        }
 
 
 

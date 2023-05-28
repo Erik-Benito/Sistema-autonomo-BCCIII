@@ -128,9 +128,9 @@
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnEntrar.Location = new System.Drawing.Point(189, 226);
+            this.btnEntrar.Location = new System.Drawing.Point(175, 226);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(79, 67);
+            this.btnEntrar.Size = new System.Drawing.Size(106, 67);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -195,9 +195,9 @@
             // btnCriarPartida
             // 
             this.btnCriarPartida.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnCriarPartida.Location = new System.Drawing.Point(38, 469);
+            this.btnCriarPartida.Location = new System.Drawing.Point(28, 471);
             this.btnCriarPartida.Name = "btnCriarPartida";
-            this.btnCriarPartida.Size = new System.Drawing.Size(84, 43);
+            this.btnCriarPartida.Size = new System.Drawing.Size(366, 38);
             this.btnCriarPartida.TabIndex = 9;
             this.btnCriarPartida.Text = "Criar";
             this.btnCriarPartida.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(34, 407);
+            this.label4.Location = new System.Drawing.Point(214, 405);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
             this.label4.TabIndex = 11;
@@ -216,10 +216,10 @@
             // 
             // txtSenhaPartida
             // 
-            this.txtSenhaPartida.Location = new System.Drawing.Point(38, 434);
+            this.txtSenhaPartida.Location = new System.Drawing.Point(218, 438);
             this.txtSenhaPartida.Multiline = true;
             this.txtSenhaPartida.Name = "txtSenhaPartida";
-            this.txtSenhaPartida.Size = new System.Drawing.Size(146, 29);
+            this.txtSenhaPartida.Size = new System.Drawing.Size(176, 27);
             this.txtSenhaPartida.TabIndex = 10;
             this.txtSenhaPartida.TextChanged += new System.EventHandler(this.txtSenhaPartida_TextChanged);
             // 
@@ -227,7 +227,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(34, 348);
+            this.label5.Location = new System.Drawing.Point(24, 407);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 24);
             this.label5.TabIndex = 13;
@@ -236,10 +236,10 @@
             // 
             // txtNomePartida
             // 
-            this.txtNomePartida.Location = new System.Drawing.Point(38, 375);
+            this.txtNomePartida.Location = new System.Drawing.Point(28, 434);
             this.txtNomePartida.Multiline = true;
             this.txtNomePartida.Name = "txtNomePartida";
-            this.txtNomePartida.Size = new System.Drawing.Size(146, 29);
+            this.txtNomePartida.Size = new System.Drawing.Size(168, 31);
             this.txtNomePartida.TabIndex = 12;
             this.txtNomePartida.TextChanged += new System.EventHandler(this.txtNomePartida_TextChanged);
             // 
@@ -247,7 +247,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 23.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(31, 304);
+            this.label6.Location = new System.Drawing.Point(21, 363);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 39);
             this.label6.TabIndex = 14;
@@ -342,9 +342,9 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.btnIniciar.Location = new System.Drawing.Point(287, 304);
+            this.btnIniciar.Location = new System.Drawing.Point(28, 299);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(107, 67);
+            this.btnIniciar.Size = new System.Drawing.Size(366, 53);
             this.btnIniciar.TabIndex = 29;
             this.btnIniciar.Text = "Inciar";
             this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -392,7 +392,7 @@
             // attPts
             // 
             this.attPts.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.attPts.Location = new System.Drawing.Point(2, 61);
+            this.attPts.Location = new System.Drawing.Point(144, 260);
             this.attPts.Name = "attPts";
             this.attPts.Size = new System.Drawing.Size(25, 33);
             this.attPts.TabIndex = 53;

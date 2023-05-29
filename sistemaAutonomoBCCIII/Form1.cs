@@ -26,6 +26,7 @@ namespace sistemaAutonomoBCCIII
         public string senhaJogador;
         public bool criouAdversario = false;
         public bool partidaEmAndamento = false;
+        public bool botOn = false;
 
         public Adversario adversario1;
         public Adversario adversario2;
@@ -247,14 +248,22 @@ namespace sistemaAutonomoBCCIII
 
             string[] infosPartida = statusPartida.Split(',');
 
-            if (infosPartida[0] == "J") this.partidaEmAndamento = true;
+            if (infosPartida[0] == "J")
+            {
+                this.partidaEmAndamento = true;
+            }
             if (infosPartida[0] == "E")
             {
                 MessageBox.Show("A partida foi encerrada");
                 this.timer1.Enabled = false;
             }
             this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
-            
+            if(infosPartida[1] == this.idJogador.ToString())
+            {
+                botJogar();
+            }
+
+
             if (!this.criouAdversario && this.partidaEmAndamento)
             {
                 this.getDadosDll.GerarTabuleiro();
@@ -292,7 +301,6 @@ namespace sistemaAutonomoBCCIII
                     }
                 }
 
-                botJogar();
             }
 
             string resposta;
@@ -335,7 +343,9 @@ namespace sistemaAutonomoBCCIII
                     primeiraPosica = pirata;
             });
 
-            if (this.controleCarta.qtdDeCarta() <= 3)
+            Console.WriteLine(ultimaPosica.posicao.ToString()); 
+
+            if (this.controleCarta.qtdCarta <= 3)
             {
                 this.controlePirata.SelecionarPirata(ultimaPosica.id);
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -446,6 +456,11 @@ namespace sistemaAutonomoBCCIII
         private void txtSenhaPartida_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ckBot_CheckedChanged(object sender, EventArgs e)
+        {
+            this.botOn = !this.botOn;
         }
     }
 }

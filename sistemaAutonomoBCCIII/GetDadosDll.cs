@@ -33,7 +33,6 @@ namespace sistemaAutonomoBCCIII
         {
             this.containerInicial = containerInicial;
             this.tratamentos = new Tratamentos();
-            this.controleCarta = new ControleCarta(containerInicial);
         }
 
         public void ListarPartidas()
@@ -88,10 +87,11 @@ namespace sistemaAutonomoBCCIII
             try
             {
                 string cartas = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
+                Console.WriteLine(cartas);
 
                 if (this.tratamentos.ehErro(cartas)) return;
 
-                this.controleCarta.setCartas(cartas);
+                this.containerInicial.controleCarta.setCartas(cartas);
             }
             catch (Exception)
             {

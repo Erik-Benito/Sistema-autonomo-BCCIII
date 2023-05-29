@@ -96,6 +96,7 @@
             this.cartaChave = new System.Windows.Forms.PictureBox();
             this.cartaEsqueleto = new System.Windows.Forms.PictureBox();
             this.cartaGarrafa = new System.Windows.Forms.PictureBox();
+            this.ckBot = new System.Windows.Forms.CheckBox();
             this.panelTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartaTricornio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartaFaca)).BeginInit();
@@ -829,11 +830,23 @@
             this.cartaGarrafa.TabStop = false;
             this.cartaGarrafa.Click += new System.EventHandler(this.cartaGarrafa_Click);
             // 
+            // ckBot
+            // 
+            this.ckBot.AutoSize = true;
+            this.ckBot.Location = new System.Drawing.Point(218, 363);
+            this.ckBot.Name = "ckBot";
+            this.ckBot.Size = new System.Drawing.Size(61, 17);
+            this.ckBot.TabIndex = 55;
+            this.ckBot.Text = "Bot ON";
+            this.ckBot.UseVisualStyleBackColor = true;
+            this.ckBot.CheckedChanged += new System.EventHandler(this.ckBot_CheckedChanged);
+            // 
             // ContainerInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 515);
+            this.Controls.Add(this.ckBot);
             this.Controls.Add(this.btnVez);
             this.Controls.Add(this.attPts);
             this.Controls.Add(this.ad4Img4);
@@ -978,6 +991,7 @@
         private System.Windows.Forms.Button attPts;
         public System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Button btnVez;
+        private System.Windows.Forms.CheckBox ckBot;
     }
 }
 

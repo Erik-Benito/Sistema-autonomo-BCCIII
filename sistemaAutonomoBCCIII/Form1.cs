@@ -27,6 +27,8 @@ namespace sistemaAutonomoBCCIII
         public bool criouAdversario = false;
         public bool partidaEmAndamento = false;
         public bool botOn = false;
+        public bool voltarInicio = false;
+        public int recuar = 0;
 
         public Adversario adversario1;
         public Adversario adversario2;
@@ -207,7 +209,11 @@ namespace sistemaAutonomoBCCIII
             int novaPosicao = posicao  == 0 ? this.controlePirata.pirataSelecionado.posicao : posicao;
 
             if (this.tratamentos.ehErro(historico))
+            {
+                this.voltarInicio = true;
                 return;
+
+            }
 
             this.controlePirata.SetPosicao(this.controlePirata.pirataSelecionado.id, novaPosicao);
             this.getDadosDll.ListarMao();
@@ -258,10 +264,7 @@ namespace sistemaAutonomoBCCIII
                 this.timer1.Enabled = false;
             }
             this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
-            if(infosPartida[1] == this.idJogador.ToString())
-            {
-                botJogar();
-            }
+
 
 
             if (!this.criouAdversario && this.partidaEmAndamento)
@@ -322,7 +325,11 @@ namespace sistemaAutonomoBCCIII
                 adversario3.atualizarPosicao(resposta);
             if (adversario4 != null)
                 adversario4.atualizarPosicao(resposta);
-
+            
+            if (infosPartida[1] == this.idJogador.ToString())
+            {
+                botJogar();
+            }
 
         }
 
@@ -333,21 +340,23 @@ namespace sistemaAutonomoBCCIII
 
             pirata ultimaPosica = new pirata();
             pirata primeiraPosica = new pirata();
+            pirata penultimoPosicao = new pirata();
 
             this.controlePirata.piratas.ForEach(pirata =>
             {
                 if (ultimaPosica.posicao > pirata.posicao)
                     ultimaPosica = pirata;
 
-                if (primeiraPosica.posicao < pirata.posicao)
+                if (pirata.posicao <= primeiraPosica.posicao)
                     primeiraPosica = pirata;
+
             });
 
-            Console.WriteLine(ultimaPosica.posicao.ToString()); 
 
-            if (this.controleCarta.qtdCarta <= 3)
+            if (this.controleCarta.qtdCarta < 3)
             {
-                this.controlePirata.SelecionarPirata(ultimaPosica.id);
+                this.controleCarta.cartaSelecionada = "@";
+                this.controlePirata.SelecionarPirata(penultimoPosicao.id);
                 this.btnJogar_Click(this, EventArgs.Empty);
 
                 return;
@@ -355,7 +364,7 @@ namespace sistemaAutonomoBCCIII
 
             this.controlePirata.SelecionarPirata(primeiraPosica.id);
 
-            if(this.controleCarta.qtdGarrafa > 1)
+            if(this.controleCarta.qtdGarrafa >= 1)
             {
                 this.controleCarta.selecionarCarta("G");
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -364,7 +373,7 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            if (this.controleCarta.qtdCaveira > 1)
+            if (this.controleCarta.qtdCaveira >= 1)
             {
                 this.controleCarta.selecionarCarta("E");
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -373,7 +382,7 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            if (this.controleCarta.qtdFaca > 1)
+            if (this.controleCarta.qtdFaca >= 1)
             {
                 this.controleCarta.selecionarCarta("F");
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -382,7 +391,7 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            if (this.controleCarta.qtdTricornio> 1)
+            if (this.controleCarta.qtdTricornio >= 1)
             {
                 this.controleCarta.selecionarCarta("T");
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -391,7 +400,7 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            if (this.controleCarta.qtdPistola > 1)
+            if (this.controleCarta.qtdPistola >= 1)
             {
                 this.controleCarta.selecionarCarta("P");
                 this.btnJogar_Click(this, EventArgs.Empty);
@@ -400,7 +409,7 @@ namespace sistemaAutonomoBCCIII
                 return;
             }
 
-            if (this.controleCarta.qtdChave > 1)
+            if (this.controleCarta.qtdChave >= 1)
             {
                 this.controleCarta.selecionarCarta("C");
                 this.btnJogar_Click(this, EventArgs.Empty);

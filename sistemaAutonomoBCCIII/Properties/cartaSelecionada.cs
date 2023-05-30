@@ -59,14 +59,6 @@ namespace sistemaAutonomoBCCIII.Properties
             this.qtdPistola = this.qtdCartas(cartas, "P"); ;
             this.qtdChave = this.qtdCartas(cartas, "C");
 
-            Console.WriteLine(this.qtdTricornio.ToString());
-            Console.WriteLine(this.qtdCaveira.ToString());
-            Console.WriteLine(this.qtdGarrafa.ToString());
-            Console.WriteLine(this.qtdFaca.ToString());
-            Console.WriteLine(this.qtdPistola.ToString());
-            Console.WriteLine(this.qtdChave.ToString());
-
-
             this.qtdCarta = qtdCartas(cartas, "E") + this.qtdCartas(cartas, "F") + this.qtdCartas(cartas, "G") + this.qtdCartas(cartas, "P") + this.qtdCartas(cartas, "C") + this.qtdCartas(cartas, "T"); ;
 
         }

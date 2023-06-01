@@ -48,7 +48,7 @@ namespace sistemaAutonomoBCCIII.Properties
             if ( this.pirataSelecionado.id != -1) 
                 this.pirataSelecionado.img.BackColor = Color.White;
 
-            if (this.pirataSelecionado.id == id && this.containerInicial.botOn == false)
+            if (this.pirataSelecionado.id == id)
             {
                 this.pirataSelecionado.id = -1;
                 this.pirataSelecionado.posicao = -1;

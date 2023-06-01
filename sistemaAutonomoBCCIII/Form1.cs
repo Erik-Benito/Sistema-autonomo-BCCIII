@@ -356,7 +356,7 @@ namespace sistemaAutonomoBCCIII
             if (this.controleCarta.qtdCarta < 3)
             {
                 this.controleCarta.cartaSelecionada = "@";
-                this.controlePirata.SelecionarPirata(penultimoPosicao.id);
+                this.controlePirata.SelecionarPirata(this.controlePirata.pirataSelecionado.id);
                 this.btnJogar_Click(this, EventArgs.Empty);
 
                 return;

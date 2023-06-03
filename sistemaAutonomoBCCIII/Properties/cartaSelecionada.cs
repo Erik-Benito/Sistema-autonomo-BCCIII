@@ -67,7 +67,7 @@ namespace sistemaAutonomoBCCIII.Properties
         {
             this.limparCorCartas();
 
-            if (cartaSelecionada == this.cartaSelecionada && this.containerInicial.botOn == false)
+            if (cartaSelecionada == this.cartaSelecionada)
             {
                 this.cartaSelecionada = "@";
                 return;

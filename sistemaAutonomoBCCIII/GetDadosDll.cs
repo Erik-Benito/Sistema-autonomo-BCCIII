@@ -87,7 +87,6 @@ namespace sistemaAutonomoBCCIII
             try
             {
                 string cartas = Jogo.ConsultarMao(this.containerInicial.idJogador, this.containerInicial.senhaJogador);
-                Console.WriteLine(cartas);
 
                 if (this.tratamentos.ehErro(cartas)) return;
 

@@ -75,8 +75,6 @@ namespace sistemaAutonomoBCCIII
 
         public int pegarPosicao (string historico)
         {
-           
-            Console.WriteLine(historico);
             historico = historico.Replace("\r\n", "");
             char test = historico[historico.Length - 1];
             if (test == ',') return 0;

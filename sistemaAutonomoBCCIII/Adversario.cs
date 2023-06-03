@@ -104,8 +104,8 @@ namespace sistemaAutonomoBCCIII
 
                 Random random = new Random();
 
-                posicaoXYpirata.posicaXY.X += random.Next(50, 80);
-                posicaoXYpirata.posicaXY.Y += random.Next(50, 80);
+                //posicaoXYpirata.posicaXY.X += random.Next(0, 80);
+                //posicaoXYpirata.posicaXY.Y += random.Next(50, 80);
 
                 pirataAtt.img.Location = posicaoXYpirata.posicaXY;
                 pirataAtt.posicao = novaPosicao;

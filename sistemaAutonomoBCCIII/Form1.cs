@@ -260,7 +260,35 @@ namespace sistemaAutonomoBCCIII
             }
             if (infosPartida[0] == "E")
             {
-                MessageBox.Show("A partida foi encerrada");
+                int qtdEu  = 0;
+                int qtdAd1 = 0;
+                int qtdAd2 = 0;
+                int qtdAd3 = 0;
+                int qtdAd4 = 0;
+
+                int vencedor = 0;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    if (this.controlePirata.piratas[i].posicao == 37) qtdEu++;
+                    if (adversario1 != null && adversario1.piratas[i].posicao == 37) qtdAd1++;
+                    if (adversario2 != null && adversario2.piratas[i].posicao == 37) qtdAd2++;
+                    if (adversario3 != null && adversario3.piratas[i].posicao == 37) qtdAd3++;
+                    if (adversario4 != null && adversario4.piratas[i].posicao == 37) qtdAd4++;
+                }
+
+                if (qtdEu == 6)
+                    vencedor = this.idJogador;
+                if (qtdAd1 == 6)
+                    vencedor = this.adversario1.id;
+                if (qtdAd2 == 6)
+                    vencedor = this.adversario2.id;
+                if (qtdAd3 == 6)
+                    vencedor = this.adversario3.id;
+                if (qtdAd4 == 6)
+                    vencedor = this.adversario4.id;
+
+                MessageBox.Show($"A partida foi encerrada, vencedor: {vencedor}");
                 this.timer1.Enabled = false;
             }
             this.btnVez.Text = infosPartida[1] == this.idJogador.ToString() ? "🫵" : "🤚";
@@ -375,8 +403,7 @@ namespace sistemaAutonomoBCCIII
         private bool tentarAvancar()
         {
             pirata pirataAtras = buscarPirataMaisAtras();
-
-            
+                        
             if(pirataAtras.id != this.controlePirata.pirataSelecionado.id)
               this.controlePirata.SelecionarPirata(pirataAtras.id);
 
@@ -429,12 +456,10 @@ namespace sistemaAutonomoBCCIII
         {
             pirata pirataAvoltar = this.consegueGanharCarta();
 
-            Console.WriteLine($"Voltar {pirataAvoltar.id} | {pirataAvoltar.posicao}");
-
             // Voltando para ganhar a carta
             if(pirataAvoltar.posicao != 0 && pirataAvoltar.posicao != 37)
             {
-                this.controleCarta.selecionarCarta(this.controleCarta.cartaSelecionada);
+                this.controleCarta.cartaSelecionada = "@";
                 this.controlePirata.SelecionarPirata(pirataAvoltar.id);
                 this.btnJogar_Click(this, EventArgs.Empty);
                 return;

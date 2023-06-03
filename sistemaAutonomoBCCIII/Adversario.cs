@@ -101,11 +101,19 @@ namespace sistemaAutonomoBCCIII
                 int posicaoAntiga = String.IsNullOrEmpty(partes[3]) ? 0 : Convert.ToInt32(partes[3]);
 
                 pirata pirataAtt = piratas.Find(p => p.posicao == posicaoAntiga);
+
+                Random random = new Random();
+
+                posicaoXYpirata.posicaXY.X += random.Next(50, 80);
+                posicaoXYpirata.posicaXY.Y += random.Next(50, 80);
+
                 pirataAtt.img.Location = posicaoXYpirata.posicaXY;
                 pirataAtt.posicao = novaPosicao;
 
                 this.containerInicial.panelTabuleiro.Controls.Remove(piratas[pirataAtt.id].img);
                 this.containerInicial.panelTabuleiro.Controls.Add(pirataAtt.img);
+                this.containerInicial.panelTabuleiro.Controls.SetChildIndex(pirataAtt.img, 0);
+
 
                 piratas[pirataAtt.id] = pirataAtt;
             }

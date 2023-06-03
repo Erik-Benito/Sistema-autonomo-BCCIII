@@ -68,6 +68,12 @@ namespace sistemaAutonomoBCCIII.Properties
             Point posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao+1).posicaXY;
 
             pirataMudado.posicao = novaPosicao;
+
+            Random random = new Random();
+
+            posicaoXYpirata.X += random.Next(50, 80);
+            posicaoXYpirata.Y += random.Next(50, 80);
+            
             pirataMudado.img.Location = posicaoXYpirata;
 
             this.piratas[idPirata] = pirataMudado;

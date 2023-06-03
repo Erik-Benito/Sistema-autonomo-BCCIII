@@ -326,7 +326,7 @@ namespace sistemaAutonomoBCCIII
             if (adversario4 != null)
                 adversario4.atualizarPosicao(resposta);
             
-            if (infosPartida[1] == this.idJogador.ToString())
+            if (infosPartida[1] == this.idJogador.ToString() && this.botOn == true)
             {
                 botJogar();
             }
@@ -339,6 +339,7 @@ namespace sistemaAutonomoBCCIII
 
             for (int i = 0; i < 6; i++)
             {
+                if (this.controlePirata.piratas[i].posicao == posicao && posicao != 0 && posicao != 37) qtd++;
                 if (adversario1 != null && adversario1.piratas[i].posicao == posicao) qtd++;
                 if (adversario2 != null && adversario2.piratas[i].posicao == posicao) qtd++;
                 if (adversario3 != null && adversario3.piratas[i].posicao == posicao) qtd++;
@@ -363,46 +364,21 @@ namespace sistemaAutonomoBCCIII
 
         private pirata buscarPirataMaisAtras()
         {
-            pirata pirataMaisAtras = this.controlePirata.piratas[0];
-
-            this.controlePirata.piratas.ForEach(pirata => 
-            {
-                if (pirata.posicao < pirataMaisAtras.posicao)
-                {
-                    pirataMaisAtras = pirata;
-                }
-
-            });
-
-            return pirataMaisAtras;
+            return this.controlePirata.piratas.OrderBy(item => item.posicao).First();
         }
 
         private pirata buscarPirataMaisAfrente()
         {
-            pirata pirataMaisAfrente = new pirata();
-
-            this.controlePirata.piratas.ForEach(pirata =>
-            {
-                if (pirata.posicao > pirataMaisAfrente.posicao && pirata.posicao != 37)
-                {
-                    pirataMaisAfrente = pirata;
-                    return;
-                }
-
-            });
-
-            return pirataMaisAfrente;
+            return this.controlePirata.piratas.OrderBy(item => item.posicao).Last(); 
         }
 
         private bool tentarAvancar()
         {
             pirata pirataAtras = buscarPirataMaisAtras();
 
-            Console.WriteLine(pirataAtras.posicao);
-            Console.WriteLine(pirataAtras.id);
-            Console.WriteLine("------------------------");
-
-            this.controlePirata.SelecionarPirata(pirataAtras.id);
+            
+            if(pirataAtras.id != this.controlePirata.pirataSelecionado.id)
+              this.controlePirata.SelecionarPirata(pirataAtras.id);
 
             if (this.controleCarta.qtdGarrafa > 0)
             {
@@ -458,19 +434,18 @@ namespace sistemaAutonomoBCCIII
             // Voltando para ganhar a carta
             if(pirataAvoltar.posicao != 0 && pirataAvoltar.posicao != 37)
             {
-                this.controleCarta.cartaSelecionada = "@";
+                this.controleCarta.selecionarCarta(this.controleCarta.cartaSelecionada);
                 this.controlePirata.SelecionarPirata(pirataAvoltar.id);
                 this.btnJogar_Click(this, EventArgs.Empty);
                 return;
             }
-
 
             // Avançando com os piratas
             if (tentarAvancar()) return;
 
             // Recuperando cartas
             this.controlePirata.SelecionarPirata(buscarPirataMaisAfrente().id);
-            this.controleCarta.selecionarCarta(this.controleCarta.cartaSelecionada);
+            this.controleCarta.cartaSelecionada = "@";
 
             this.btnJogar_Click(this, EventArgs.Empty);
         }

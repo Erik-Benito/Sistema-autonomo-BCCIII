@@ -277,15 +277,18 @@ namespace sistemaAutonomoBCCIII
                     if (adversario4 != null && adversario4.piratas[i].posicao == 37) qtdAd4++;
                 }
 
-                if (qtdEu == 6)
+
+                int maiorValor = Math.Max(qtdEu, Math.Max(qtdAd1, Math.Max(qtdAd2, Math.Max(qtdAd3, qtdAd4))));
+
+                if (qtdEu == maiorValor)
                     vencedor = this.idJogador;
-                if (qtdAd1 == 6)
+                if (qtdAd1 == maiorValor)
                     vencedor = this.adversario1.id;
-                if (qtdAd2 == 6)
+                if (qtdAd2 == maiorValor)
                     vencedor = this.adversario2.id;
-                if (qtdAd3 == 6)
+                if (qtdAd3 == maiorValor)
                     vencedor = this.adversario3.id;
-                if (qtdAd4 == 6)
+                if (qtdAd4 == maiorValor)
                     vencedor = this.adversario4.id;
 
                 MessageBox.Show($"A partida foi encerrada, vencedor: {vencedor}");

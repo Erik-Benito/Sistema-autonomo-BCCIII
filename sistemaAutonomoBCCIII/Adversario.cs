@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using static sistemaAutonomoBCCIII.Properties.ControlePirata;
 using static sistemaAutonomoBCCIII.GetDadosDll;
 using System.Runtime.InteropServices;
+using System.Collections;
 
 namespace sistemaAutonomoBCCIII
 {
@@ -21,6 +22,7 @@ namespace sistemaAutonomoBCCIII
         public int id;
         public List<pirata> piratas;
         public string ultimaAtt = "";
+        public string penultimaAtt = "";
 
 
         public Adversario(ContainerInicial containerInicial, int adversarioNumero, int id)
@@ -75,49 +77,66 @@ namespace sistemaAutonomoBCCIII
                     };
                     break;
             }
-            
+
             this.id = id;
+        }
+
+        private void attPirata(string ultimoItem)
+        {
+            int novaPosicao = this.tratamentos.pegarPosicao(ultimoItem);
+
+            if (novaPosicao == 0) { return; }
+
+            posicaoItem posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1);
+            string[] partes = ultimoItem.Split(',');
+
+            int posicaoAntiga = String.IsNullOrEmpty(partes[3]) ? 0 : Convert.ToInt32(partes[3]);
+
+            pirata pirataAtt = piratas.Find(p => p.posicao == posicaoAntiga);
+
+            Random random = new Random();
+
+            posicaoXYpirata.posicaXY.X += random.Next(15, 20);
+
+            pirataAtt.img.Location = posicaoXYpirata.posicaXY;
+            pirataAtt.posicao = novaPosicao;
+
+            this.containerInicial.panelTabuleiro.Controls.Remove(piratas[pirataAtt.id].img);
+            this.containerInicial.panelTabuleiro.Controls.Add(pirataAtt.img);
+            this.containerInicial.panelTabuleiro.Controls.SetChildIndex(pirataAtt.img, 0);
+
+
+            piratas[pirataAtt.id] = pirataAtt;
         }
 
         public void atualizarPosicao(string resposta)
         {
+            bool ultimaJogada = false;
+            bool penultimaJogada = false;
+            bool antiPenultimaJogada = false;
+
 
             if (this.tratamentos.ehErro(resposta) || String.IsNullOrEmpty(resposta)) return;
 
             List<string> historico = this.tratamentos.stringsForArray(resposta).ToList();
             string ultimoItem = historico.Last();
-            
-            if (ultimoItem.Contains(this.id.ToString()) && ultimoItem != ultimaAtt)
+
+
+            if (historico.Count >= 3)
+            {
+                ultimaJogada = historico[historico.Count - 1].Contains(this.id.ToString());
+                penultimaJogada = historico[historico.Count - 2].Contains(this.id.ToString());
+                antiPenultimaJogada = historico[historico.Count - 3].Contains(this.id.ToString());
+            }
+
+            if (ultimaJogada == true && penultimaJogada == true && antiPenultimaJogada == true && ultimoItem != ultimaAtt)
             {
                 ultimaAtt = ultimoItem;
 
-                int novaPosicao = this.tratamentos.pegarPosicao(resposta);
-
-                if(novaPosicao == 0) { return; }
-
-                posicaoItem posicaoXYpirata = this.getDadosDll.posicoesMapeadas.Find(p => p.posicao == novaPosicao + 1);
-                string[] partes = ultimoItem.Split(',');
-
-                int posicaoAntiga = String.IsNullOrEmpty(partes[3]) ? 0 : Convert.ToInt32(partes[3]);
-
-                pirata pirataAtt = piratas.Find(p => p.posicao == posicaoAntiga);
-
-                Random random = new Random();
-
-                //posicaoXYpirata.posicaXY.X += random.Next(0, 80);
-                //posicaoXYpirata.posicaXY.Y += random.Next(50, 80);
-
-                pirataAtt.img.Location = posicaoXYpirata.posicaXY;
-                pirataAtt.posicao = novaPosicao;
-
-                this.containerInicial.panelTabuleiro.Controls.Remove(piratas[pirataAtt.id].img);
-                this.containerInicial.panelTabuleiro.Controls.Add(pirataAtt.img);
-                this.containerInicial.panelTabuleiro.Controls.SetChildIndex(pirataAtt.img, 0);
-
-
-                piratas[pirataAtt.id] = pirataAtt;
+                attPirata(historico[historico.Count - 3]);
+                attPirata(historico[historico.Count - 2]);
+                attPirata(historico[historico.Count - 1]);
             }
-
         }
     }
 }

@@ -71,8 +71,7 @@ namespace sistemaAutonomoBCCIII.Properties
 
             Random random = new Random();
 
-            //posicaoXYpirata.X += random.Next(0, 30);
-            //posicaoXYpirata.Y += random.Next(50, 80);
+            posicaoXYpirata.X += random.Next(15, 20);
             
             pirataMudado.img.Location = posicaoXYpirata;
 

@@ -324,7 +324,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 17F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(161, 63);
+            this.label13.Location = new System.Drawing.Point(245, 60);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(149, 28);
             this.label13.TabIndex = 27;
@@ -334,7 +334,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F, System.Drawing.FontStyle.Bold);
-            this.lblSenha.Location = new System.Drawing.Point(281, 67);
+            this.lblSenha.Location = new System.Drawing.Point(295, 363);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(0, 24);
             this.lblSenha.TabIndex = 28;
@@ -347,7 +347,7 @@
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(366, 53);
             this.btnIniciar.TabIndex = 29;
-            this.btnIniciar.Text = "Inciar";
+            this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
